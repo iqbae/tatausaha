@@ -24,14 +24,13 @@ $datapegawai = mysqli_num_rows($dataUser);
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 ">
+                        <div class="text-xs font-weight-bold text-white text-uppercase mb-1 ">
                             SK BEBAS NARKOBA</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $jumlahUser;
-                                                                            ?></div>
+                        <div class="h5 mb-0 font-weight-bold text-white"><?php echo $jumlahUser;?></div>
                     </div>
 
                     <div class="col-auto">
-                    <i class="fa-solid fa-pills fa-3x "></i>
+                    <i class="fa-solid fa-pills fa-3x text-white"></i>
                        
                     </div>
                 </div>
@@ -63,13 +62,13 @@ $datapegawai = mysqli_num_rows($dataUser);
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                        <div class="text-xs font-weight-bold text-white text-uppercase mb-1">
                             SK BEBAS BUTA WARNA</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $suratketeranganusaha
+                        <div class="h5 mb-0 font-weight-bold text-white"><?php echo $suratketeranganusaha
                                                                             ?></div>
                     </div>
                     <div class="col-auto">
-                        <i class="fa-solid  fa-3x fa-eye"></i>
+                        <i class="fa-solid text-white fa-3x fa-eye"></i>
                     </div>
                 </div>
             </div>
@@ -81,13 +80,13 @@ $datapegawai = mysqli_num_rows($dataUser);
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                        <div class="text-xs font-weight-bold text-white text-uppercase mb-1">
                             SK SAKIT</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $suratketerangankematian
+                        <div class="h5 mb-0 font-weight-bold text-white"><?php echo $suratketerangankematian
                                                                             ?></div>
                     </div>
                     <div class="col-auto">
-                        <i class="fas fa-envelope fa-3x "></i>
+                        <i class="fas fa-envelope text-white fa-3x "></i>
                     </div>
                 </div>
             </div>
@@ -99,13 +98,13 @@ $datapegawai = mysqli_num_rows($dataUser);
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                        <div class="text-xs font-weight-bold text-white text-uppercase mb-1">
                             SK SEHAT</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Userbelummemilikirumah
+                        <div class="h5 mb-0 font-weight-bold text-white"><?php echo $Userbelummemilikirumah
                                                                             ?></div>
                     </div>
                     <div class="col-auto">
-                        <i class="fas fa-envelope fa-3x "></i>
+                        <i class="fas fa-envelope text-white fa-3x "></i>
                     </div>
                 </div>
             </div>
@@ -117,13 +116,12 @@ $datapegawai = mysqli_num_rows($dataUser);
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">
+                        <div class="text-xs font-weight-bold text-white text-uppercase mb-1">
                             PASIEN</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Userdatapenduduk
-                                                                            ?></div>
+                        <div class="h5 mb-0 font-weight-bold text-white"><?php echo $Userdatapenduduk?></div>
                     </div>
                     <div class="col-auto">
-                        <i class="fa-solid fa-person fa-3x"></i>
+                        <i class="fa-solid fa-person text-white fa-3x "></i>
                     </div>
                 </div>
             </div>
@@ -136,13 +134,13 @@ $datapegawai = mysqli_num_rows($dataUser);
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                        <div class="text-xs font-weight-bold text-white text-uppercase mb-1">
                             DOKTER</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $datapegawai
+                        <div class="h5 mb-0 font-weight-bold text-white"><?php echo $datapegawai
                                                                             ?></div>
                     </div>
                     <div class="col-auto">
-                        <i class="fa-solid fa-3x fa-user-doctor"></i>
+                        <i class="fa-solid fa-3x text-white fa-user-doctor"></i>
                     </div>
                 </div>
             </div> 

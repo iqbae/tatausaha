@@ -9,7 +9,7 @@ href="index.php">
  <div class="sidebar-brand-text mx-3">RSU  NIRWANA</div>
  </a>
  <hr class="sidebar-divider my-0">
- <li class="nav-item success">
+ <li class="nav-item info">
  <a class="nav-link" href="?page=dashboard">
  <i class="fas fa-fw fa-tachometer-alt"></i>
  <span>Dashboard</span></a>
@@ -19,7 +19,7 @@ href="index.php">
  <span>Pelayanan</span>
  </a>
  <div id="transaksi1" class="collapse" aria-labelledby="headingTwo" dataparent="#accordionSidebar">
- <div class="bg-success py-2 collapse-inner rounded">
+ <div class="bg-info py-2 collapse-inner rounded">
  <a class="collapse-item" href="?page=skj-show">SK Bebas Narkoba</a>
  <a class="collapse-item" href="?page=Sktm-show">SK Lahir</a>
  <a class="collapse-item" href="?page=Sku-show">SK Bebas Buta Warna</a>
@@ -34,7 +34,7 @@ aria-expanded="true" aria-controls="transaksi">
  <span>Master Data</span>
  </a>
  <div id="transaksi" class="collapse" aria-labelledby="headingTwo" dataparent="#accordionSidebar">
- <div class="bg-success py-2 collapse-inner rounded">
+ <div class="bg-info py-2 collapse-inner rounded">
  <a class="collapse-item" href="?page=datapenduduk-show">Pasien</a>
  <a class="collapse-item" href="?page=datapegawai-show">Dokter</a>
  </div>
@@ -47,7 +47,7 @@ aria-expanded="true" aria-controls="transaksi">
  <span>Rekap Laporan</span>
  </a>
  <div id="transaksi2" class="collapse" aria-labelledby="headingTwo" dataparent="#accordionSidebar">
- <div class="bg-success py-2 collapse-inner rounded">
+ <div class="bg-info py-2 collapse-inner rounded">
  <a target="_BLANK" class="collapse-item" href="skj/skj_laporan.php">SK Bebas Narkoba</a>
  <a target="_BLANK" class="collapse-item" href="Sktm/Sktm_laporan.php">SK Lahir</a>
  <a target="_BLANK" class="collapse-item" href="Sku/Sku_laporan.php">SK Bebas Buta Warna</a>
