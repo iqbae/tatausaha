@@ -3,7 +3,7 @@ if (isset($_POST['submit'])) {
   $id = $_POST['id'];
   $nomor_surat = $_POST['nomor_surat'];
   $nik = $_POST['nik'];
-  $nama = $_POST['nama'];
+  $nama = $_POST['nama']; 
   $tempat_lahir = $_POST['tempat_lahir'];
   $tanggal_lahir = $_POST['tanggal_lahir'];
   $jenis_kelamin = $_POST['jenis_kelamin'];
@@ -13,7 +13,7 @@ if (isset($_POST['submit'])) {
   $pekerjaan = $_POST['pekerjaan'];
   $alamat = $_POST['alamat'];
   $keperluan = $_POST['keperluan'];
-  $nama_file = $_FILES['foto']['name'];
+
   $tmp_file = $_FILES['foto']['tmp_name'];
   $direktori = "foto/$nama_file";
   if (move_uploaded_file($tmp_file, $direktori)) {
@@ -131,12 +131,7 @@ $data  = mysqli_fetch_assoc($query);
         </div>
       
 
-      <div class="col-md-10">
-          <div class="form-group">
-            <label for="foto">Upload Foto Pengantar RT</label>
-            <input type="file" class="form-control" id="foto" name="foto" placeholder="Upload Foto Pengantar RT" required>
-          </div>
-        </div>
+
       
 
       <div class="col-md-10">
