@@ -16,7 +16,7 @@ while ($data = mysqli_fetch_array($result)) {
   $pekerjaan = $data['pekerjaan'];
   $alamat = $data['alamat'];
   $keperluan = $data['keperluan'];
-  $nama_file = $_FILES['foto']['name'];
+
   $tmp_file = $_FILES['foto']['tmp_name'];
   $direktori = "foto/$nama_file";
   if (move_uploaded_file($tmp_file, $direktori)) {
@@ -105,10 +105,7 @@ if (isset($_POST['submit'])) {
         <label for="keperluan">Keperluan</label>
         <input type="text" name="keperluan" class="form-control" placeholder="keperluan" value="<?php echo $keperluan ?>" required>
       </div>
-      <div class="form-group">
-        <label for="foto">Upload Foto Pengantar RT</label>
-        <input type="file" name="foto" class="form-control" placeholder="foto" value="<?php echo $foto ?>" required>
-      </div>
+      
       <div class="form-group">
         <label for="tanggal_surat">Tanggal Surat</label>
         <input type="date" name="tanggal surat" class="form-control" placeholder="tanggal surat" value="<?php echo $tanggal_surat ?>" required>
