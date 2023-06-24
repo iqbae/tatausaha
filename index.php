@@ -10,17 +10,17 @@ case "dashboard";
 include "dashboard.php";
 break;
 // SK Janda
-case "skj-show";
-include "skj/skj_show.php";
+case "Narkoba-show";
+include "Narkoba/Narkoba_show.php";
 break;
-case "skj-add";
-include "skj/skj_add.php";
+case "Narkoba-add";
+include "Narkoba/Narkoba_add.php";
 break;
-case "skj-edit";
-include "skj/skj_edit.php";
+case "Narkoba-edit";
+include "Narkoba/Narkoba_edit.php";
 break;
-case "skj-delete";
-include "skj/skj_delete.php";
+case "Narkoba-delete";
+include "Narkoba/Narkoba_delete.php";
 break;
 // SK Tidak Mampu
 case "Sktm-show";
