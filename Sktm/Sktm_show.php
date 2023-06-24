@@ -6,7 +6,7 @@
   </div>
   <div class="card-body">
     <!-- <div class="row"> -->
-    <a href="?page=datapenduduk-show1" class="btn btn-primary mb-2">Tambah Data</a>
+    <a href="?page=Sktm-add" class="btn btn-primary mb-2">Tambah Data</a>
     <!-- <a href="Sktm/Sktm_laporan.php" target="_blank" class="btn btn-success  mb-2">Cetak</a> -->
     <form action="#" method="POST">
       <div class=" input-group mb-4">
@@ -23,14 +23,18 @@
           <tr>
             <th>No</th>
             <th>Nomor Surat</th>
-            <th>Nik</th>
-            <th>Nama</th>
+            <th>Nama Istri</th>
+            <th>Umur Istri</th>
+            <th>Nama Suami</th>
+            <th>Umur Suami</th>
             <th>Tempat Lahir</th>
             <th>Tanggal Lahir</th>
+            <th>Pukul</th>
             <th>Jenis Kelamin</th>
-            <th>Pekerjaan</th>
-            <th>Kewarganegaraan</th>
+            <th>Berat</th>
+            <th>Panjang</th>
             <th>Alamat</th>
+            <th>Anak Ke</th>
             <th>Tanggal Surat</th>
             <th>Aksi</th>
           </tr>
@@ -57,19 +61,23 @@
             <tr>
               <td><?php echo $no ?></td>
               <td><?php echo $data['nomor_surat'] ?></td>
-              <td><?php echo $data['nik'] ?></td>
-              <td><?php echo $data['nama'] ?></td>
+              <td><?php echo $data['nama_istri'] ?></td>
+              <td><?php echo $data['umur_istri'] ?></td>
+              <td><?php echo $data['nama_suami'] ?></td>
+              <td><?php echo $data['umur_suami'] ?></td>
               <td><?php echo $data['tempat_lahir'] ?></td>
               <td><?php echo $data['tanggal_lahir'] ?></td>
+              <td><?php echo $data['pukul'] ?></td>
               <td><?php echo $data['jenis_kelamin'] ?></td>
-              <td><?php echo $data['pekerjaan'] ?></td>
-              <td><?php echo $data['kewarganegaraan'] ?></td>
+              <td><?php echo $data['berat'] ?></td>
+              <td><?php echo $data['panjang'] ?></td>
+              <td><?php echo $data['anak_ke'] ?></td>
               <td><?php echo $data['alamat'] ?></td>
               <td><?php echo $data['tanggal_surat'] ?></td>
               <td>
                 <!-- <a href="?page=Sktm-add&idsktm=<?php echo $data['idsktm']; ?>" class="btn btn-sm btn-link mr-1"><i class="fa fa-align-justify"></i></a> -->
                 <a href="?page=Sktm-edit&idsktm=<?php echo $data['idsktm']; ?>" class="btn btn-sm btn-link mr-1"><i class="fas fa-edit"></i></a>
-                <a target="_BLANK" href="Sktm/Sktm_print.php?idsktm=<?php echo $data['idsktm']; ?>" class="btn btn-sm btn-link mr-1" onclick="return confirm('Cetak Surat <?php echo $data['nama']; ?> ( <?php echo $data['nomor_surat']; ?> ) ? ');"><i class="fa fa-print"></i></a>
+                <a target="_BLANK" href="Sktm/Sktm_print.php?idsktm=<?php echo $data['idsktm']; ?>" class="btn btn-sm btn-link mr-1" onclick="return confirm('Cetak Surat <?php echo $data['nama_istri']; ?> ( <?php echo $data['nomor_surat']; ?> ) ? ');"><i class="fa fa-print"></i></a>
                 <a href="?page=Sktm-delete&idsktm=<?php echo $data['idsktm']; ?>" class="btn btn-sm btn-link text-danger" onclick="return confirm('Anda yakin mau menghapus item ini ?')"><i class="fa fa-trash"></i></a>
 
               </td>
