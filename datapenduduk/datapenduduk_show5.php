@@ -60,7 +60,7 @@
               <td><?php echo $data['jenis_kelamin'] ?></td>
               <td><?php echo $data['alamat'] ?></td>
               <td>
-                <a href="?page=skj-add&id=<?php echo $data['nik']; ?>" class="btn btn-sm btn-link mr-2"><i class="fas fa-arrow-alt-circle-right" style="color:blue"></i></a>
+                <a href="?page=Skj-add&id=<?php echo $data['nik']; ?>" class="btn btn-sm btn-link mr-2"><i class="fas fa-arrow-alt-circle-right" style="color:blue"></i></a>
                 <a href="?page=datapenduduk-delete&idpenduduk=<?php echo $data['idpenduduk']; ?>" class="btn btn-sm btn-link text-danger" onclick="return confirm('Anda yakin mau menghapus item ini ?')"><i class="fa fa-trash"></i></a>
 
               </td>
