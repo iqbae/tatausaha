@@ -20,7 +20,7 @@ href="index.php">
  </a>
  <div id="transaksi1" class="collapse" aria-labelledby="headingTwo" dataparent="#accordionSidebar">
  <div class="bg-info py-2 collapse-inner rounded">
- <a class="collapse-item" href="?page=skj-show">SK Bebas Narkoba</a>
+ <a class="collapse-item" href="?page=Narkoba-show">SK Bebas Narkoba</a>
  <a class="collapse-item" href="?page=Sktm-show">SK Lahir</a>
  <a class="collapse-item" href="?page=Sku-show">SK Bebas Buta Warna</a>
  <a class="collapse-item" href="?page=Skk-show">SK Sakit</a>

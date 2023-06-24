@@ -7,7 +7,7 @@
   <div class="card-body">
     <!-- <div class="row"> -->
     <a href="?page=datapenduduk-show5" class="btn btn-primary mb-2">Tambah Data</a>
-    <a href="Skj/Skj_laporan.php" target="_blank" class="btn btn-success  mb-2">Cetak</a>
+    <a href="Narkoba/Narkoba_laporan.php" target="_blank" class="btn btn-success  mb-2">Cetak</a>
     <form action="#" method="POST">
       <div class=" input-group mb-4">
         <input type="text" class="form-control" placeholder="Masukan nama" name="keyword">
@@ -31,6 +31,9 @@
             <th>Status</th>
             <th>Kewarganegaraan</th>
             <th>Keperluan</th>
+            <th>Aphetamine</th>
+            <th>Methamphetamine</th>
+            <th>TCH</th>
             <th>Tanggal Surat</th>
             <th>Aksi</th>
           </tr>
@@ -41,12 +44,12 @@
           $page = isset($_GET["halaman"]) ? (int) $_GET["halaman"] : 1;
           $mulai = ($page > 1) ? ($page * $limit) - $limit : 0;
 
-          $query = mysqli_query($con, "SELECT * FROM suratketeranganjanda");
+          $query = mysqli_query($con, "SELECT * FROM sk_bebas_napza");
 
           if (isset($_POST['search'])) {
             $keyword = trim($_POST['keyword']);
             if (!empty($keyword)) {
-              $query = mysqli_query($con, "SELECT * FROM suratketeranganjanda WHERE nik LIKE '%" . $keyword . "%' OR nama LIKE '%" . $keyword . "%'");
+              $query = mysqli_query($con, "SELECT * FROM sk_bebas_napza WHERE nik LIKE '%" . $keyword . "%' OR nama LIKE '%" . $keyword . "%'");
             }
           }
 
@@ -65,12 +68,15 @@
               <td><?php echo $data['status'] ?></td>
               <td><?php echo $data['kewarganegaraan'] ?></td>
               <td><?php echo $data['keperluan'] ?></td>
+              <td><?php echo $data['aphetamine'] ?></td>
+              <td><?php echo $data['methamphetamine'] ?></td>
+              <td><?php echo $data['tch'] ?></td>
               <td><?php echo $data['tanggal_surat'] ?></td>
               <td>
-                <!-- <a href="?page=Skj-add&idskj=<?php echo $data['idskj']; ?>" class="btn btn-sm btn-link mr-1"><i class="fa fa-align-justify"></i></a> -->
-                <a href="?page=Skj-edit&idskj=<?php echo $data['idskj']; ?>" class="btn btn-sm btn-link mr-1"><i class="fas fa-edit"></i></a>
-                <a target="_BLANK" href="Skj/Skj_print.php?idskj=<?php echo $data['idskj']; ?>" class="btn btn-sm btn-link mr-1" onclick="return confirm('Cetak Surat <?php echo $data['nama']; ?> ( <?php echo $data['nomor_surat']; ?> ) ? ');"><i class="fa fa-print"></i></a>
-                <a href="?page=Skj-delete&idskj=<?php echo $data['idskj']; ?>" class="btn btn-sm btn-link text-danger" onclick="return confirm('Anda yakin mau menghapus item ini ?')"><i class="fa fa-trash"></i></a>
+               <!-- <a href="?page=Skj-add&idskj=<?php echo $data['idskj']; ?>" class="btn btn-sm btn-link mr-1"><i class="fa fa-align-justify"></i></a> -->
+                <a href="?page=Narkoba-edit&idskj=<?php echo $data['idskj']; ?>" class="btn btn-sm btn-link mr-1"><i class="fas fa-edit"></i></a>
+                <a target="_BLANK" href="Narkoba/Narkoba_print.php?idskj=<?php echo $data['idskj']; ?>" class="btn btn-sm btn-link mr-1" onclick="return confirm('Cetak Surat <?php echo $data['nama']; ?> ( <?php echo $data['nomor_surat']; ?> ) ? ');"><i class="fa fa-print"></i></a>
+                <a href="?page=Narkoba-delete&idskj=<?php echo $data['idskj']; ?>" class="btn btn-sm btn-link text-danger" onclick="return confirm('Anda yakin mau menghapus item ini ?')"><i class="fa fa-trash"></i></a>
 
               </td>
             </tr>
@@ -83,7 +89,7 @@
       </table>
     </div>
     <?php
-    $result = mysqli_query($con, "SELECT * FROM suratketeranganjanda");
+    $result = mysqli_query($con, "SELECT * FROM sk_bebas_napza");
     $total_records = mysqli_num_rows($result);
     ?>
 

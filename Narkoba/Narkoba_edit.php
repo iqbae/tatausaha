@@ -2,7 +2,7 @@
 include "../connection.php";
 
 $idskj = $_GET['idskj'];
-$result = mysqli_query($con, "SELECT * FROM suratketeranganjanda WHERE idskj=$idskj");
+$result = mysqli_query($con, "SELECT * FROM sk_bebas_napza WHERE idskj=$idskj");
 while ($data = mysqli_fetch_array($result)) {
   $nomor_surat = $data['nomor_surat'];
   $nik = $data['nik'];
@@ -16,36 +16,33 @@ while ($data = mysqli_fetch_array($result)) {
   $pekerjaan = $data['pekerjaan'];
   $alamat = $data['alamat'];
   $keperluan = $data['keperluan'];
-  $nama_file = $_FILES['foto']['name'];
-  $tmp_file = $_FILES['foto']['tmp_name'];
-  $direktori = "foto/$nama_file";
-  if (move_uploaded_file($tmp_file, $direktori)) {
-    echo "Foto berhasil diupload.";
-  } else {
-    echo ".";
-  }
+  $aphetamine = $_POST['aphetamine'];
+  $methamphetamine = $_POST['methamphetamine'];
+  $tch = $_POST['tch'];
   $tanggal_surat = $data['tanggal_surat'];
-  
 }
 
 if (isset($_POST['submit'])) {
-    $nomor_surat = $_POST['nomor_surat'];
-    $nik = $_POST['nik'];
-    $nama = $_POST['nama'];
-    $tempat_lahir = $_POST['tempat_lahir'];
-    $tanggal_lahir = $_POST['tanggal_lahir'];
-    $jenis_kelamin = $_POST['jenis_kelamin'];
-    $status = $_POST['status'];
-    $agama = $_POST['agama'];
-    $kewarganegaraan = $_POST['kewarganegaraan'];
-    $pekerjaan = $_POST['pekerjaan'];
-    $alamat = $_POST['alamat'];
-    $keperluan = $_POST['keperluan'];
-    $tanggal_surat = $_POST['tanggal_surat'];
-    
+  $nomor_surat = $_POST['nomor_surat'];
+  $nik = $_POST['nik'];
+  $nama = $_POST['nama'];
+  $tempat_lahir = $_POST['tempat_lahir'];
+  $tanggal_lahir = $_POST['tanggal_lahir'];
+  $jenis_kelamin = $_POST['jenis_kelamin'];
+  $status = $_POST['status'];
+  $agama = $_POST['agama'];
+  $kewarganegaraan = $_POST['kewarganegaraan'];
+  $pekerjaan = $_POST['pekerjaan'];
+  $alamat = $_POST['alamat'];
+  $keperluan = $_POST['keperluan'];
+  $aphetamine = $_POST['aphetamine'];
+  $methamphetamine = $_POST['methamphetamine'];
+  $tch = $_POST['tch'];
+  $tanggal_surat = $_POST['tanggal_surat'];
+
 
   // update user data
-  $result = mysqli_query($con, "UPDATE suratketeranganjanda SET nomor_surat='$nomor_surat',nik='$nik',nama='$nama',tempat_lahir='$tempat_lahir',tanggal_lahir='$tanggal_lahir',jenis_kelamin='$jenis_kelamin',status='$status',agama='$agama',kewarganegaraan='$kewarganegaraan',pekerjaan='$pekerjaan',alamat='$alamat',keperluan='$keperluan',foto='$foto',tanggal_surat='$tanggal_surat' WHERE idskj=$idskj");
+  $result = mysqli_query($con, "UPDATE sk_bebas_napza SET nomor_surat='$nomor_surat',nik='$nik',nama='$nama',tempat_lahir='$tempat_lahir',tanggal_lahir='$tanggal_lahir',jenis_kelamin='$jenis_kelamin',status='$status',agama='$agama',kewarganegaraan='$kewarganegaraan',pekerjaan='$pekerjaan',alamat='$alamat',keperluan='$keperluan',aphetamine='$aphetamine',methamphetamine='$methamphetamine',tch='$tch',tanggal_surat='$tanggal_surat' WHERE idskj=$idskj");
   // Redirect to homepage to display updated user in list
   echo "<script>window.location.href ='?page=Skj-show';</script>";
 }
@@ -109,10 +106,31 @@ if (isset($_POST['submit'])) {
         <label for="tanggal_surat">Tanggal Surat</label>
         <input type="date" name="tanggal surat" class="form-control" placeholder="tanggal surat" value="<?php echo $tanggal_surat ?>" required>
       </div>
+  
+      <div class="row "><!-- start countainer -->
+        <div class=" col form-group">
+          <label for="aphetamine">Aphetamine</label>
+          <input type="text" name="aphetamine" class="form-control border-warning" placeholder="aphetamine" value="<?php echo $aphetamine ?>" required>
+          <div class="form-text">Isi dengan "Negatif" atau "Positif"</div>
+        </div>
+        <div class="col form-group">
+          <label for="methamphetamine">Methamphetamine</label>
+          <input type="text" name="methamphetamine" class="form-control border-warning" placeholder="methamphetamine" value="<?php echo $methamphetamine ?>" required>
+          <div class="form-text">Isi dengan "Negatif" atau "Positif"</div>
+        </div>
+        <div class=" col form-group">
+          <label for="tch">TCH</label>
+          <input type="text" name="tch" class="form-control border-warning"  placeholder="tch" value="<?php echo $tch ?>" required>
+          <div class="form-text">Isi dengan "Negatif" atau "Positif"</div>
+        </div>
+      </div>
+  </div> <!--end countainer-->
 
-      <input type="submit" name="submit" class="btn btn-success" value="Simpan">
-      <a href="?page=Skj-show" class="btn btn-warning">Kembali</a>
-    </form>
-  </div>
+</div>
+
+<input type="submit" name="submit" class="btn btn-success" value="Simpan">
+<a href="?page=Skj-show" class="btn btn-warning">Kembali</a>
+</form>
+</div>
 </div>
 <script src="validation.js"></script>

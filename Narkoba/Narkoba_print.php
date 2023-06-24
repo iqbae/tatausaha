@@ -13,7 +13,7 @@ $year = date("Y");
 if (isset($_GET['idskj'])) {
             $idskj  = $_GET['idskj'];
             $no = 1;  
-            $query = mysqli_query($con, "SELECT * FROM suratketeranganjanda j JOIN datapenduduk p ON j.nik=p.nik WHERE j.idskj='$_GET[idskj]'")
+            $query = mysqli_query($con, "SELECT * FROM sk_bebas_napza j JOIN datapenduduk p ON j.nik=p.nik WHERE j.idskj='$_GET[idskj]'")
                 or die('Ada kesalahan pada query tampil Data : '.mysqli_error($con));
 
 }
@@ -44,11 +44,11 @@ if (isset($_GET['idskj'])) {
         </div>
 
         <br>
-        <?php 
+        <!-- <?php 
           $query2 = mysqli_query($con, "SELECT * FROM datapegawai WHERE jabatan='Kasi Kesos'") 
                                                     or die('Ada kesalahan pada query tampil data : '.con_error($mysqli));
           $data2  = mysqli_fetch_assoc($query2);
-        ?>
+        ?> -->
         <div id="isi">
             <table style="border:none; font-size: 11pt;" width="700px">
             <tr >
@@ -98,15 +98,15 @@ if (isset($_GET['idskj'])) {
                 <table style="border:none; font-size: 11pt;" width="700px">
                 <tr >
               <td width="360" align="left"><br>a. APHETAMINE</td>
-              <td width="340" align="left"><br>: Negatif (-) </td> 
+              <td width="340" align="left"><br>: <?php echo $data['aphetamine']; ?></td> 
             </tr>
             <tr >
               <td width="360" align="left">b. METHAMPHETAMINE</td>
-              <td width="340" align="left">: Negatif (-) </td> 
+              <td width="340" align="left">: <?php echo $data['methamphetamine']; ?></td> 
             </tr>
             <tr >
               <td width="360" align="left">c. THC</td>
-              <td width="340" align="left">: Negatif (-) </td> 
+              <td width="340" align="left">: <?php echo $data['tch']; ?> </td> 
             </tr>
             </table>
             <br>
