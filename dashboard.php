@@ -1,6 +1,6 @@
 <?php
 include "../connection.php";
-$dataUser = mysqli_query($con, "SELECT * FROM suratketeranganjanda");
+$dataUser = mysqli_query($con, "SELECT * FROM sk_bebas_napza");
 $jumlahUser = mysqli_num_rows($dataUser);
 $dataUser = mysqli_query($con, "SELECT * FROM datapenduduk");
 $Userdatapenduduk = mysqli_num_rows($dataUser);
