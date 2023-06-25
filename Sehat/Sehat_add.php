@@ -14,20 +14,13 @@ if (isset($_POST['submit'])) {
   $alamat = $_POST['alamat'];
   $keperluan = $_POST['keperluan'];
 
-  $tmp_file = $_FILES['foto']['tmp_name'];
-  $direktori = "foto/$nama_file";
-  if (move_uploaded_file($tmp_file, $direktori)) {
-    echo "Foto berhasil diupload.";
-  } else {
-    echo "Foto gagal diupload.";
-  }
   $tanggal_surat = $_POST['tanggal_surat'];
-  $insert = mysqli_query($con, "INSERT INTO suratbelummemilikirumah(nomor_surat,nik,nama,tempat_lahir,tanggal_lahir,jenis_kelamin,status,agama,kewarganegaraan,pekerjaan,alamat,keperluan,foto,tanggal_surat) VALUES('$nomor_surat','$nik','$nama','$tempat_lahir','$tanggal_lahir','$jenis_kelamin','$status','$agama','$kewarganegaraan','$pekerjaan','$alamat','$keperluan','$direktori','$tanggal_surat')");
+  $insert = mysqli_query($con, "INSERT INTO sk_sehat(nomor_surat,nik,nama,tempat_lahir,tanggal_lahir,jenis_kelamin,status,agama,kewarganegaraan,pekerjaan,alamat,keperluan,tanggal_surat) VALUES('$nomor_surat','$nik','$nama','$tempat_lahir','$tanggal_lahir','$jenis_kelamin','$status','$agama','$kewarganegaraan','$pekerjaan','$alamat','$keperluan','$tanggal_surat')");
 
 
 
   if ($insert) {
-    echo "<script>window.location.href = '?page=Skbmr-show';</script>";
+    echo "<script>window.location.href = '?page=Sehat-show';</script>";
   }
 }
 if (isset($_GET['id'])) {

@@ -7,7 +7,7 @@
   <div class="card-body">
     <!-- <div class="row"> -->
     <a href="?page=datapenduduk-show4" class="btn btn-primary mb-2">Tambah Data</a>
-    <!-- <a href="Skbmr/Skbmr_laporan.php" target="_blank" class="btn btn-success  mb-2">Cetak</a> -->
+    <!-- <a href="Sehat/Sehat.php" target="_blank" class="btn btn-success  mb-2">Cetak</a> -->
     <form action="#" method="POST">
       <div class="input-group mb-4">
         <input type="text" class="form-control" placeholder="Masukan nama" name="keyword">
@@ -26,11 +26,11 @@
             <th>Nik</th>
             <th>Nama</th>
             <!-- <th>Tempat Lahir</th> -->
-            <th>Tanggal Lahir</th>
-            <th>Kewarganegaraan</th>
+            <th>tempat tanggal lahir</th>
+
             <th>Pekerjaan</th>
             <th>Alamat</th>
-            <!-- <th>Keperluan</th> -->
+            <th>Keperluan</th>
             <th>Tanggal Surat</th>
             <th>Aksi</th>
           </tr>
@@ -41,12 +41,12 @@
           $page = isset($_GET["halaman"]) ? (int) $_GET["halaman"] : 1;
           $mulai = ($page > 1) ? ($page * $limit) - $limit : 0;
 
-          $query = mysqli_query($con, "SELECT * FROM suratbelummemilikirumah where nik=nik");
+          $query = mysqli_query($con, "SELECT * FROM sk_sehat where nik=nik");
 
           if (isset($_POST['search'])) {
             $keyword = trim($_POST['keyword']);
             if (!empty($keyword)) {
-              $query = mysqli_query($con, "SELECT * FROM suratbelummemilikirumah WHERE nik LIKE '%" . $keyword . "%' OR nama LIKE '%" . $keyword . "%'");
+              $query = mysqli_query($con, "SELECT * FROM sk_sehat WHERE nik LIKE '%" . $keyword . "%' OR nama LIKE '%" . $keyword . "%'");
             }
           }
 
@@ -59,18 +59,16 @@
               <td><?php echo $data['nomor_surat'] ?></td>
               <td><?php echo $data['nik'] ?></td>
               <td><?php echo $data['nama'] ?></td>
-              <td><?php echo $data['tempat_lahir'] ?></td>
-              <td><?php echo $data['tanggal_lahir'] ?></td>
-              <td><?php echo $data['kewarganegaraan'] ?></td>
+              <td><?php echo $data['tempat_lahir'] ?>, <?php echo $data['tanggal_lahir'] ?></td>
               <td><?php echo $data['pekerjaan'] ?></td>
               <td><?php echo $data['alamat'] ?></td>
               <td><?php echo $data['keperluan'] ?></td>
               <td><?php echo $data['tanggal_surat'] ?></td>
               <td>
-                <!-- <a href="?page=Skbmr-add&idskbmr=<?php echo $data['idskbmr']; ?>" class="btn btn-sm btn-link mr-1"><i class="fa fa-align-justify"></i></a> -->
-                <a href="?page=Skbmr-edit&idskbmr=<?php echo $data['idskbmr']; ?>" class="btn btn-sm btn-link mr-1"><i class="fa fa-edit"></i></a>
-                <a target="_BLANK" href="Skbmr/Skbmr_print.php?idskbmr=<?php echo $data['idskbmr']; ?>" class="btn btn-sm btn-link mr-1" onclick="return confirm('Cetak Surat <?php echo $data['nama']; ?> ( <?php echo $data['nomor_surat']; ?> ) ? ');"><i class="fa fa-print"></i></a>
-                <a href="?page=Skbmr-delete&idskbmr=<?php echo $data['idskbmr']; ?>" class="btn btn-sm btn-link text-danger" onclick="return confirm('Anda yakin mau menghapus item ini ?')"><i class="fa fa-trash"></i></a>
+                <!-- <a href="?page=Sehat-add&idskbmr=<?php echo $data['idskbmr']; ?>" class="btn btn-sm btn-link mr-1"><i class="fa fa-align-justify"></i></a> -->
+                <a href="?page=Sehat-edit&idskbmr=<?php echo $data['idskbmr']; ?>" class="btn btn-sm btn-link mr-1"><i class="fa fa-edit"></i></a>
+                <a target="_BLANK" href="Sehat/Sehat_print.php?idskbmr=<?php echo $data['idskbmr']; ?>" class="btn btn-sm btn-link mr-1" onclick="return confirm('Cetak Surat <?php echo $data['nama']; ?> ( <?php echo $data['nomor_surat']; ?> ) ? ');"><i class="fa fa-print"></i></a>
+                <a href="?page=Sehat-delete&idskbmr=<?php echo $data['idskbmr']; ?>" class="btn btn-sm btn-link text-danger" onclick="return confirm('Anda yakin mau menghapus item ini ?')"><i class="fa fa-trash"></i></a>
 
               </td>
             </tr>
@@ -83,7 +81,7 @@
       </table>
     </div>
     <?php
-    $result = mysqli_query($con, "SELECT * FROM suratbelummemilikirumah");
+    $result = mysqli_query($con, "SELECT * FROM sk_sehat");
     $total_records = mysqli_num_rows($result);
     ?>
 

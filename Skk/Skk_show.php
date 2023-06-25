@@ -26,12 +26,10 @@
             <th>Nik</th>
             <th>Nama</th>
             <th>Alamat</th>
-            <th>Tanggal Meninggal Dunia</th>
-            <th>Agama</th>
-            <th>Tempat Kematian</th>
-            <th>Sebab Kematian</th>
-            <th>Yang Melapor</th>
-            <th>Nik Melapor</th>
+            <th>pekerjaan</th>            
+            <th>Masa Istirahat</th>
+            <th>Dari Tanggal</th>
+            <th>Sampai Tanggal</th>
             <th>Tanggal Surat</th>
             <th>Aksi</th>
           </tr>
@@ -61,12 +59,10 @@
               <td><?php echo $data['nik'] ?></td>
               <td><?php echo $data['nama'] ?></td>
               <td><?php echo $data['alamat'] ?></td>
-              <td><?php echo $data['tanggalmeninggal_dunia'] ?></td>
-              <td><?php echo $data['agama'] ?></td>
-              <td><?php echo $data['tempat_kematian'] ?></td>
-              <td><?php echo $data['sebab_kematian'] ?></td>
-              <td><?php echo $data['yang_melapor'] ?></td>
-              <td><?php echo $data['nik_melapor'] ?></td>
+              <td><?php echo $data['pekerjaan'] ?></td>
+              <td><?php echo $data['masa_sakit'] ?></td>
+              <td><?php echo $data['dari_tanggal'] ?></td>
+              <td><?php echo $data['sampai_tanggal'] ?></td>
               <td><?php echo $data['tanggal_surat'] ?></td>
               <td>
                 <!-- <a href="?page=Skk-add&idskk=<?php echo $data['idskk']; ?>" class="btn btn-sm btn-link mr-1"><i class="fa fa-align-justify"></i></a> -->

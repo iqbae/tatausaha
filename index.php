@@ -62,17 +62,17 @@ case "Skk-delete";
 include "Skk/Skk_delete.php";
 break;
 // SK Belum Memiliki Rumah 
-case "Skbmr-show";
-include "Skbmr/Skbmr_show.php";
+case "Sehat-show";
+include "Sehat/Sehat_show.php";
 break;
-case "Skbmr-add";
-include "Skbmr/Skbmr_add.php";
+case "Sehat-add";
+include "Sehat/Sehat_add.php";
 break;
-case "Skbmr-edit";
-include "Skbmr/Skbmr_edit.php";
+case "Sehat-edit";
+include "Sehat/Sehat_edit.php";
 break;
-case "Skbmr-delete";
-include "Skbmr/Skbmr_delete.php";
+case "Sehat-delete";
+include "Sehat/Sehat_delete.php";
 break;
 // Data Penduduk
 case "datapenduduk-show";

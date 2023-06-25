@@ -13,7 +13,7 @@ $year = date("Y");
 if (isset($_GET['idskbmr'])) {
             $idskbmr  = $_GET['idskbmr'];
             $no = 1;  
-            $query = mysqli_query($con, "SELECT * FROM suratbelummemilikirumah b JOIN datapenduduk p ON b.nik=p.nik WHERE b.idskbmr='$_GET[idskbmr]'")
+            $query = mysqli_query($con, "SELECT * FROM sk_sehat b JOIN datapenduduk p ON b.nik=p.nik WHERE b.idskbmr='$_GET[idskbmr]'")
                 or die('Ada kesalahan pada query tampil Data : '.mysqli_error($con));
 
 }
@@ -85,14 +85,12 @@ if (isset($_GET['idskbmr'])) {
               <td width="360" align="left">Alamat</td>
               <td width="340" align="left">: <?php echo $data['alamat']; ?></td> 
             </tr>
-            <tr >
-              <td width="360" align="left">Keperluan</td>
-              <td width="340" align="left">: <?php echo $data['keperluan']; ?></td> 
-            </tr>
+
             </table>
             <div class="container" style="font-size: 11pt;">
               <br>
                 <p style="text-align: justify;">Telah diperiksa kesehatannya </i> pada tanggal <?php echo tgl_eng_to_ind("$hari_ini"); ?> dengan hasil yang bersangkutan dinyatakan </i></u><b> SEHAT </i></u></b> fisik dan mental.</u></i></b><br><br>
+                Surat ini digunakan untuk keperluan : <b><?php echo $data['keperluan']; ?> </b><br><br>
                 Demikian Surat Keterangan Sehat ini dibuat untuk dapat digunakan sebagaimana mestinya.<p>
             </div>
             <?php

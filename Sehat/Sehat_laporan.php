@@ -47,7 +47,7 @@ $year = date("Y");
             <tbody>
                 <?php
                 $no = 1;
-                $result = mysqli_query($con, "SELECT * FROM suratbelummemilikirumah");
+                $result = mysqli_query($con, "SELECT * FROM sk_sehat");
                 while ($data = mysqli_fetch_array($result)) {
                 ?>
                     <tr>

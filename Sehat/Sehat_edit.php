@@ -2,7 +2,7 @@
 include "../connection.php";
 
 $idskbmr = $_GET['idskbmr'];
-$result = mysqli_query($con, "SELECT * FROM suratbelummemilikirumah WHERE idskbmr=$idskbmr");
+$result = mysqli_query($con, "SELECT * FROM sk_sehat WHERE idskbmr=$idskbmr");
 while ($data = mysqli_fetch_array($result)) {
   $nomor_surat = $data['nomor_surat'];
   $nik = $data['nik'];
@@ -16,14 +16,6 @@ while ($data = mysqli_fetch_array($result)) {
   $pekerjaan = $data['pekerjaan'];
   $alamat = $data['alamat'];
   $keperluan = $data['keperluan'];
-
-  $tmp_file = $_FILES['foto']['tmp_name'];
-  $direktori = "foto/$nama_file";
-  if (move_uploaded_file($tmp_file, $direktori)) {
-    echo "Foto berhasil diupload.";
-  } else {
-    echo ".";
-  }
   $tanggal_surat = $data['tanggal_surat'];
   
 }
@@ -45,9 +37,9 @@ if (isset($_POST['submit'])) {
     
 
   // update user data
-  $result = mysqli_query($con, "UPDATE suratbelummemilikirumah SET nomor_surat='$nomor_surat',nik='$nik',nama='$nama',tempat_lahir='$tempat_lahir',tanggal_lahir='$tanggal_lahir',jenis_kelamin='$jenis_kelamin',status='$status',agama='$agama',kewarganegaraan='$kewarganegaraan',pekerjaan='$pekerjaan',alamat='$alamat',keperluan='$keperluan',foto='$foto',tanggal_surat='$tanggal_surat' WHERE idskbmr=$idskbmr");
+  $result = mysqli_query($con, "UPDATE sk_sehat SET nomor_surat='$nomor_surat',nik='$nik',nama='$nama',tempat_lahir='$tempat_lahir',tanggal_lahir='$tanggal_lahir',jenis_kelamin='$jenis_kelamin',status='$status',agama='$agama',kewarganegaraan='$kewarganegaraan',pekerjaan='$pekerjaan',alamat='$alamat',keperluan='$keperluan',tanggal_surat='$tanggal_surat' WHERE idskbmr=$idskbmr");
   // Redirect to homepage to display updated user in list
-  echo "<script>window.location.href ='?page=Skbmr-show';</script>";
+  echo "<script>window.location.href ='?page=Sehat-show';</script>";
 }
 
 ?>
@@ -112,7 +104,7 @@ if (isset($_POST['submit'])) {
       </div>
 
       <input type="submit" name="submit" class="btn btn-success" value="Simpan">
-      <a href="?page=Skj-show" class="btn btn-warning">Kembali</a>
+      <a href="?page=Sehat-show" class="btn btn-warning">Kembali</a>
     </form>
   </div>
 </div>

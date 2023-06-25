@@ -24,7 +24,7 @@ href="index.php">
  <a class="collapse-item" href="?page=Lahir-show">SK Lahir</a>
  <a class="collapse-item" href="?page=Sku-show">SK Bebas Buta Warna</a>
  <a class="collapse-item" href="?page=Skk-show">SK Sakit</a>
- <a class="collapse-item" href="?page=Skbmr-show">SK Sehat</a>
+ <a class="collapse-item" href="?page=Sehat-show">SK Sehat</a>
  <li class="nav-item">
 
  <li class="nav-item">
@@ -52,7 +52,7 @@ aria-expanded="true" aria-controls="transaksi">
  <a target="_BLANK" class="collapse-item" href="Lahir/Lahir_laporan.php">SK Lahir</a>
  <a target="_BLANK" class="collapse-item" href="Sku/Sku_laporan.php">SK Bebas Buta Warna</a>
  <a target="_BLANK" class="collapse-item" href="Skk/Skk_laporan.php">SK Sakit</a>
- <a target="_BLANK" class="collapse-item" href="Skbmr/Skbmr_laporan.php">SK Sehat</a>
+ <a target="_BLANK" class="collapse-item" href="Sehat/Sehat_laporan.php">SK Sehat</a>
  </div>
  </div>
  </li>
