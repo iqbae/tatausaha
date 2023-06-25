@@ -49,17 +49,17 @@ case "Sku-delete";
 include "Sku/Sku_delete.php";
 break;
 // SK Kematian 
-case "Skk-show";
-include "Skk/Skk_show.php";
+case "Sakit-show";
+include "Sakit/Sakit_show.php";
 break;
-case "Skk-add";
-include "Skk/Skk_add.php";
+case "Sakit-add";
+include "Sakit/Sakit_add.php";
 break;
-case "Skk-edit";
-include "Skk/Skk_edit.php";
+case "Sakit-edit";
+include "Sakit/Sakit_edit.php";
 break;
-case "Skk-delete";
-include "Skk/Skk_delete.php";
+case "Sakit-delete";
+include "Sakit/Sakit_delete.php";
 break;
 // SK Belum Memiliki Rumah 
 case "Sehat-show";
