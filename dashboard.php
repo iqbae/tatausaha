@@ -63,7 +63,7 @@ $datapegawai = mysqli_num_rows($dataUser);
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-white text-uppercase mb-1">
-                            SK BEBAS BUTA WARNA</div>
+                            SK BUTA WARNA</div>
                         <div class="h5 mb-0 font-weight-bold text-white"><?php echo $suratketeranganusaha
                                                                             ?></div>
                     </div>

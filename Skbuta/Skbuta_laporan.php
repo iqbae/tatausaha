@@ -26,7 +26,7 @@ $year = date("Y");
         <hr style="border: 2; border-top: solid 3.5px #444;">
 
         <div id="title">
-            <h3><u>REKAP LAPORAN SURAT KETERANGAN BEBAS BUTA WARNA</u></h3>
+            <h3><u>REKAP LAPORAN SURAT KETERANGAN HASIL BUTA WARNA</u></h3>
         </div>
         <br>
         <div id="isi">
@@ -36,9 +36,8 @@ $year = date("Y");
                 <th class="center">No</th>
                 <th class="left">Nomor Surat</th>
                 <th class="left">Nama ( NIK )</th>
-                <th class="center">Nama Usaha</th>
-                <th class="center">Alamat Usaha</th>
                 <th class="center">Keperluan</th>
+                <th class="center">Hasil Tes</th>
                 <th class="center">Tanggal Surat</th>
             </tr>
           </thead>
@@ -52,9 +51,8 @@ $year = date("Y");
               <td align="center"><?php echo $no; ?></td>
               <td align="left"><?php echo $data['nomor_surat']; ?> </td>
               <td align="left"><?php echo $data['nama']; ?>( <?php echo $data['nik']; ?> )</td>
-              <td align="center"><?php echo $data['nama_usaha']; ?></td>
-              <td align="center"><?php echo $data['alamat_usaha']; ?></td>
               <td align="center"><?php echo $data['keperluan']; ?></td>
+              <td align="center"><?php echo $data['hasil']; ?></td>
               <td align="center"><?php echo tgl_eng_to_ind($data['tanggal_surat']); ?></td>
             </tr>
           <?php
@@ -62,7 +60,7 @@ $year = date("Y");
             }
           
         ?>
-            /tbody>
+
             </table>
             <div id="footer-tanggal">
                 Banjarbaru, <?php echo tgl_eng_to_ind("$hari_ini"); ?>

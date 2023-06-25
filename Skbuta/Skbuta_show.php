@@ -2,12 +2,12 @@
 
 <div class="card shadow mb-5">
   <div class="card-header py-3">
-    <h6 class="m-0 font-weight-bold text-primary">Data Surat Keterangan Bebas Buta Warna</h6>
+    <h6 class="m-0 font-weight-bold text-primary">Data Surat Keterangan Buta Warna</h6>
   </div>
   <div class="card-body">
     <!-- <div class="row"> -->
     <a href="?page=datapenduduk-show2" class="btn btn-primary mb-2">Tambah Data</a>
-    <!-- <a href="Sku/Sku_laporan.php" target="_blank" class="btn btn-success  mb-2">Cetak</a> -->
+    <!-- <a href="Skbuta/Skbuta_laporan.php" target="_blank" class="btn btn-success  mb-2">Cetak</a> -->
     <form action="#" method="POST">
       <div class=" input-group mb-4">
         <input type="text" class="form-control" placeholder="Masukan nama" name="keyword">
@@ -27,9 +27,7 @@
             <th>Nama</th>
             <th>Pekerjaan</th>
             <th>Alamat</th>
-            <th>Nama Usaha</th>
-            <th>Alamat Usaha</th>
-            <th>Jenis Usaha</th>
+            <th>Hasil Tes</th>
             <th>Keperluan</th>
             <th>Tanggal Surat</th>
             <th>Aksi</th>
@@ -61,16 +59,14 @@
               <td><?php echo $data['nama'] ?></td>
               <td><?php echo $data['pekerjaan'] ?></td>
               <td><?php echo $data['alamat'] ?></td>
-              <td><?php echo $data['nama_usaha'] ?></td>
-              <td><?php echo $data['alamat_usaha'] ?></td>
-              <td><?php echo $data['jenis_usaha'] ?></td>
+              <td><?php echo $data['hasil'] ?></td>
               <td><?php echo $data['keperluan'] ?></td>
               <td><?php echo $data['tanggal_surat'] ?></td>
               <td>
-                <!-- <a href="?page=Sku-add&idsku=<?php echo $data['idsku']; ?>" class="btn btn-sm btn-link mr-1"><i class="fa fa-align-justify"></i></a> -->
-                <a href="?page=Sku-edit&idsku=<?php echo $data['idsku']; ?>" class="btn btn-sm btn-link mr-1"><i class="fas fa-edit"></i></a>
-                <a target="_BLANK" href="Sku/Sku_print.php?idsku=<?php echo $data['idsku']; ?>" class="btn btn-sm btn-link mr-1" onclick="return confirm('Cetak Surat <?php echo $data['nama']; ?> ( <?php echo $data['nomor_surat']; ?> ) ? ');"><i class="fa fa-print"></i></a>
-                <a href="?page=Sku-delete&idsku=<?php echo $data['idsku']; ?>" class="btn btn-sm btn-link text-danger" onclick="return confirm('Anda yakin mau menghapus item ini ?')"><i class="fa fa-trash"></i></a>
+                <!-- <a href="?page=Skbuta-add&idsku=<?php echo $data['idsku']; ?>" class="btn btn-sm btn-link mr-1"><i class="fa fa-align-justify"></i></a> -->
+                <a href="?page=Skbuta-edit&idsku=<?php echo $data['idsku']; ?>" class="btn btn-sm btn-link mr-1"><i class="fas fa-edit"></i></a>
+                <a target="_BLANK" href="Skbuta/Skbuta_print.php?idsku=<?php echo $data['idsku']; ?>" class="btn btn-sm btn-link mr-1" onclick="return confirm('Cetak Surat <?php echo $data['nama']; ?> ( <?php echo $data['nomor_surat']; ?> ) ? ');"><i class="fa fa-print"></i></a>
+                <a href="?page=Skbuta-delete&idsku=<?php echo $data['idsku']; ?>" class="btn btn-sm btn-link text-danger" onclick="return confirm('Anda yakin mau menghapus item ini ?')"><i class="fa fa-trash"></i></a>
 
               </td>
             </tr>

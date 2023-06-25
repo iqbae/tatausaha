@@ -16,49 +16,37 @@ while ($data = mysqli_fetch_array($result)) {
   $pekerjaan = $data['pekerjaan'];
   $alamat = $data['alamat'];
   $nama_usaha = $data['nama_usaha'];
-  $alamat_usaha = $data['alamat_usaha'];
-  $jenis_usaha = $data['jenis_usaha'];
+  $hasil = $data['hasil'];
   $keperluan = $data['keperluan'];
-  $nama_file = $_FILES['foto']['name'];
-  $tmp_file = $_FILES['foto']['tmp_name'];
-  $direktori = "foto/$nama_file";
-  if (move_uploaded_file($tmp_file, $direktori)) {
-    echo "Foto berhasil diupload.";
-  } else {
-    echo "";
-  }
   $tanggal_surat = $data['tanggal_surat'];
-  
 }
 
 if (isset($_POST['submit'])) {
-    $nomor_surat = $_POST['nomor_surat'];
-    $nik = $_POST['nik'];
-    $nama = $_POST['nama'];
-    $tempat_lahir = $_POST['tempat_lahir'];
-    $tanggal_lahir = $_POST['tanggal_lahir'];
-    $jenis_kelamin = $_POST['jenis_kelamin'];
-    $status = $_POST['status'];
-    $agama = $_POST['agama'];
-    $kewarganegaraan = $_POST['kewarganegaraan'];
-    $pekerjaan = $_POST['pekerjaan'];
-    $alamat = $_POST['alamat'];
-    $nama_usaha = $_POST['nama_usaha'];
-    $alamat_usaha = $_POST['alamat_usaha'];
-    $jenis_usaha = $_POST['jenis_usaha'];
-    $keperluan = $_POST['keperluan'];
-    $tanggal_surat = $_POST['tanggal_surat'];
-  
+  $nomor_surat = $_POST['nomor_surat'];
+  $nik = $_POST['nik'];
+  $nama = $_POST['nama'];
+  $tempat_lahir = $_POST['tempat_lahir'];
+  $tanggal_lahir = $_POST['tanggal_lahir'];
+  $jenis_kelamin = $_POST['jenis_kelamin'];
+  $status = $_POST['status'];
+  $agama = $_POST['agama'];
+  $kewarganegaraan = $_POST['kewarganegaraan'];
+  $pekerjaan = $_POST['pekerjaan'];
+  $alamat = $_POST['alamat'];
+  $hasil = $_POST['hasil'];
+  $keperluan = $_POST['keperluan'];
+  $tanggal_surat = $_POST['tanggal_surat'];
+
   // update user data
-  $result = mysqli_query($con, "UPDATE suratketeranganusaha SET nomor_surat='$nomor_surat', nik='$nik', nama='$nama', tempat_lahir='$tempat_lahir', tanggal_lahir='$tanggal_lahir', jenis_kelamin='$jenis_kelamin', status='$status', agama='$agama', kewarganegaraan='$kewarganegaraan', pekerjaan='$pekerjaan', alamat='$alamat',nama_usaha='$nama_usaha', alamat_usaha='$alamat_usaha', jenis_usaha='$jenis_usaha',keperluan='$keperluan',foto='$foto', tanggal_surat='$tanggal_surat' WHERE idsku=$idsku");
+  $result = mysqli_query($con, "UPDATE suratketeranganusaha SET nomor_surat='$nomor_surat', nik='$nik', nama='$nama', tempat_lahir='$tempat_lahir', tanggal_lahir='$tanggal_lahir', jenis_kelamin='$jenis_kelamin', status='$status', agama='$agama', kewarganegaraan='$kewarganegaraan', pekerjaan='$pekerjaan', alamat='$alamat', hasil='$hasil', keperluan='$keperluan', tanggal_surat='$tanggal_surat' WHERE idsku=$idsku");
   // Redirect to homepage to display updated user in list
-  echo "<script>window.location.href ='?page=Sku-show';</script>";
+  echo "<script>window.location.href ='?page=Skbuta-show';</script>";
 }
 
 ?>
 <div class="card shadow mb-4">
   <div class="card-header py-3">
-    <h6 class="m-0 font-weight-bold text-primary">Edit Data Surat Keterangan Usaha</h6>
+    <h6 class="m-0 font-weight-bold text-primary">Edit Data Surat Keterangan Buta Warna</h6>
   </div>
   <div class="card-body">
     <form method="POST" class="needs-validation" novalidate>
@@ -107,24 +95,12 @@ if (isset($_POST['submit'])) {
         <input type="text" name="alamat" class="form-control" placeholder="alamat" value="<?php echo $alamat ?>" required>
       </div>
       <div class="form-group">
-        <label for="nama_usaha">Nama Usaha</label>
-        <input type="text" name="nama usaha" class="form-control" placeholder="nama_usaha" value="<?php echo $nama_usaha ?>" required>
-      </div>
-      <div class="form-group">
-        <label for="alamat_usaha">Alamat Usaha</label>
-        <input type="text" name="alamat usaha" class="form-control" placeholder="alamat usaha" value="<?php echo $alamat_usaha ?>" required>
-      </div>
-      <div class="form-group">
-        <label for="jenis_usaha">Jenis Usaha</label>
-        <input type="text" name="jenis usaha" class="form-control" placeholder="jenis usaha" value="<?php echo $alamat ?>" required>
+        <label for="hasil">Hasil Test</label>
+        <input type="text" name="hasil" class="form-control" placeholder="Hasil tes" value="<?php echo $hasil ?>" required>
       </div>
       <div class="form-group">
         <label for="keperluan">Keperluan</label>
         <input type="text" name="keperluan" class="form-control" placeholder="keperluan" value="<?php echo $keperluan ?>" required>
-      </div>
-      <div class="form-group">
-        <label for="foto">Foto</label>
-        <input type="file" name="foto" class="form-control" placeholder="foto" value="<?php echo $foto ?>" required>
       </div>
       <div class="form-group">
         <label for="tanggal_surat">Tanggal Surat</label>
@@ -132,7 +108,7 @@ if (isset($_POST['submit'])) {
       </div>
 
       <input type="submit" name="submit" class="btn btn-success" value="Simpan">
-      <a href="?page=Sku-show" class="btn btn-warning">Kembali</a>
+      <a href="?page=Skbuta-show" class="btn btn-warning">Kembali</a>
     </form>
   </div>
 </div>

@@ -13,20 +13,11 @@ if (isset($_POST['submit'])) {
   $kewarganegaraan = $_POST['kewarganegaraan'];
   $pekerjaan = $_POST['pekerjaan'];
   $alamat = $_POST['alamat'];
-  $nama_usaha = $_POST['nama_usaha'];
-  $alamat_usaha = $_POST['alamat_usaha'];
-  $jenis_usaha = $_POST['jenis_usaha'];
+  $hasil = $_POST['hasil'];
   $keperluan = $_POST['keperluan'];
-  $nama_file = $_FILES['foto']['name'];
-  $tmp_file = $_FILES['foto']['tmp_name'];
-  $direktori = "foto/$nama_file";
-  if (move_uploaded_file($tmp_file, $direktori)) {
-    echo "Foto berhasil diupload.";
-  } else {
-    echo "Foto gagal diupload.";
-  }
+
   $tanggal_surat = $_POST['tanggal_surat'];
-  $insert = mysqli_query($con, "INSERT INTO suratketeranganusaha(nomor_surat,nik,nama,tempat_lahir,tanggal_lahir,jenis_kelamin,status,agama,kewarganegaraan,pekerjaan,alamat,nama_usaha,alamat_usaha,jenis_usaha,keperluan,foto,tanggal_surat) VALUES('$nomor_surat','$nik','$nama','$tempat_lahir','$tanggal_lahir','$jenis_kelamin','$status','$agama','$kewarganegaraan','$pekerjaan','$alamat','$nama_usaha','$alamat_usaha','$jenis_usaha','$keperluan','$direktori','$tanggal_surat')");
+  $insert = mysqli_query($con, "INSERT INTO suratketeranganusaha(nomor_surat,nik,nama,tempat_lahir,tanggal_lahir,jenis_kelamin,status,agama,kewarganegaraan,pekerjaan,alamat,hasil,keperluan,tanggal_surat) VALUES('$nomor_surat','$nik','$nama','$tempat_lahir','$tanggal_lahir','$jenis_kelamin','$status','$agama','$kewarganegaraan','$pekerjaan','$alamat','$hasil','$keperluan','$tanggal_surat')");
   if ($insert) {
     echo "<p>query berhasil<p/>";
 } else {
@@ -35,7 +26,7 @@ if (isset($_POST['submit'])) {
 
 
   if ($insert) {
-    echo "<script>window.location.href = '?page=Sku-show';</script>";
+    echo "<script>window.location.href = '?page=Skbuta-show';</script>";
   }
 }
 if (isset($_GET['id'])) {
@@ -49,7 +40,7 @@ $data  = mysqli_fetch_assoc($query);
 <form action="" method="post" enctype="multipart/form-data">
 <div class="card shadow mb-4">
   <div class="card-header py-3">
-    <h6 class="m-0 font-weight-bold text-primary">Tambah Data Surat Keterangan Bebas Buta Warna</h6>
+    <h6 class="m-0 font-weight-bold text-primary">Tambah Data Surat Keterangan Buta Warna</h6>
   </div>
   <div class="card-body">
     <form method="POST" class="needs-validation" novalidate>
@@ -145,22 +136,8 @@ $data  = mysqli_fetch_assoc($query);
 
       <div class="col-md-10">
           <div class="form-group">
-            <label for="nama_usaha">Nama Usaha</label>
-            <input type="text" class="form-control" id="nama_usaha" name="nama_usaha" placeholder="Nama Usaha" required>
-          </div>
-        </div>
-
-        <div class="col-md-10">
-          <div class="form-group">
-            <label for="alamat_usaha">Alamat Usaha</label>
-            <input type="text" class="form-control" id="alamat_usaha" name="alamat_usaha" placeholder="Alamat Usaha" required>
-          </div>
-        </div>
-
-        <div class="col-md-10">
-          <div class="form-group">
-            <label for="jenis_usaha">Jenis Usaha</label>
-            <input type="text" class="form-control" id="jenis_usaha" name="jenis_usaha" placeholder="Jenis Usaha" required>
+            <label for="hasil">Hasil test</label>
+            <input type="text" class="form-control" id="hasil" name="hasil" placeholder="hasil tes" required>
           </div>
         </div>
 
@@ -173,14 +150,6 @@ $data  = mysqli_fetch_assoc($query);
 
       <div class="col-md-10">
           <div class="form-group">
-            <label for="foto">Upload Foto keterangan dari Dokter</label>
-            <input type="file" class="form-control" id="foto" name="foto" placeholder="Upload Foto Pengantar RT" required>
-          </div>
-        </div>
-      
-
-      <div class="col-md-10">
-          <div class="form-group">
             <label for="tanggal_surat">Tanggal Surat</label>
             <input type="date" class="form-control" id="tanggal_surat" name="tanggal_surat" placeholder="Tanggal Surat" required>
           </div>
@@ -188,7 +157,7 @@ $data  = mysqli_fetch_assoc($query);
       </div>
 
       <input type="submit" name="submit" class="btn btn-success" value="Simpan">
-      <a href="?page=kategori-show" class="btn btn-warning">Kembali</a>
+      <a href="?page=Skbuta-show" class="btn btn-warning">Kembali</a>
     </form>
 
   </div>

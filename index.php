@@ -36,17 +36,17 @@ case "Lahir-delete";
 include "Lahir/Lahir_delete.php";
 break;
 // SK Usaha
-case "Sku-show";
-include "Sku/Sku_show.php";
+case "Skbuta-show";
+include "Skbuta/Skbuta_show.php";
 break;
-case "Sku-add";
-include "Sku/Sku_add.php";
+case "Skbuta-add";
+include "Skbuta/Skbuta_add.php";
 break;
-case "Sku-edit";
-include "Sku/Sku_edit.php";
+case "Skbuta-edit";
+include "Skbuta/Skbuta_edit.php";
 break;
-case "Sku-delete";
-include "Sku/Sku_delete.php";
+case "Skbuta-delete";
+include "Skbuta/Skbuta_delete.php";
 break;
 // SK Kematian 
 case "Sakit-show";

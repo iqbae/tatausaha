@@ -22,7 +22,7 @@ href="index.php">
  <div class="bg-info py-2 collapse-inner rounded">
  <a class="collapse-item" href="?page=Narkoba-show">SK Bebas Narkoba</a>
  <a class="collapse-item" href="?page=Lahir-show">SK Lahir</a>
- <a class="collapse-item" href="?page=Sku-show">SK Bebas Buta Warna</a>
+ <a class="collapse-item" href="?page=Skbuta-show">SK Buta Warna</a>
  <a class="collapse-item" href="?page=Sakit-show">SK Sakit</a>
  <a class="collapse-item" href="?page=Sehat-show">SK Sehat</a>
  <li class="nav-item">
@@ -50,7 +50,7 @@ aria-expanded="true" aria-controls="transaksi">
  <div class="bg-info py-2 collapse-inner rounded">
  <a target="_BLANK" class="collapse-item" href="Narkoba/Narkoba_laporan.php">SK Bebas Narkoba</a>
  <a target="_BLANK" class="collapse-item" href="Lahir/Lahir_laporan.php">SK Lahir</a>
- <a target="_BLANK" class="collapse-item" href="Sku/Sku_laporan.php">SK Bebas Buta Warna</a>
+ <a target="_BLANK" class="collapse-item" href="Skbuta/Skbuta_laporan.php">SK Buta Warna</a>
  <a target="_BLANK" class="collapse-item" href="Sakit/Sakit_laporan.php">SK Sakit</a>
  <a target="_BLANK" class="collapse-item" href="Sehat/Sehat_laporan.php">SK Sehat</a>
  </div>
