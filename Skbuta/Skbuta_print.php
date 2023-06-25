@@ -13,7 +13,7 @@ $year = date("Y");
 if (isset($_GET['idsku'])) {
   $idsku  = $_GET['idsku'];
   $no = 1;
-  $query = mysqli_query($con, "SELECT * FROM suratketeranganusaha b JOIN datapenduduk p ON b.nik=p.nik WHERE b.idsku='$_GET[idsku]'")
+  $query = mysqli_query($con, "SELECT * FROM sk_buta b JOIN datapenduduk p ON b.nik=p.nik WHERE b.idsku='$_GET[idsku]'")
     or die('Ada kesalahan pada query tampil Data : ' . mysqli_error($con));
 }
 

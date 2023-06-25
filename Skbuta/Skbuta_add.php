@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
   $keperluan = $_POST['keperluan'];
 
   $tanggal_surat = $_POST['tanggal_surat'];
-  $insert = mysqli_query($con, "INSERT INTO suratketeranganusaha(nomor_surat,nik,nama,tempat_lahir,tanggal_lahir,jenis_kelamin,status,agama,kewarganegaraan,pekerjaan,alamat,hasil,keperluan,tanggal_surat) VALUES('$nomor_surat','$nik','$nama','$tempat_lahir','$tanggal_lahir','$jenis_kelamin','$status','$agama','$kewarganegaraan','$pekerjaan','$alamat','$hasil','$keperluan','$tanggal_surat')");
+  $insert = mysqli_query($con, "INSERT INTO sk_buta(nomor_surat,nik,nama,tempat_lahir,tanggal_lahir,jenis_kelamin,status,agama,kewarganegaraan,pekerjaan,alamat,hasil,keperluan,tanggal_surat) VALUES('$nomor_surat','$nik','$nama','$tempat_lahir','$tanggal_lahir','$jenis_kelamin','$status','$agama','$kewarganegaraan','$pekerjaan','$alamat','$hasil','$keperluan','$tanggal_surat')");
   if ($insert) {
     echo "<p>query berhasil<p/>";
 } else {

@@ -39,12 +39,12 @@
           $page = isset($_GET["halaman"]) ? (int) $_GET["halaman"] : 1;
           $mulai = ($page > 1) ? ($page * $limit) - $limit : 0;
 
-          $query = mysqli_query($con, "SELECT * FROM suratketeranganusaha where nik=nik");
+          $query = mysqli_query($con, "SELECT * FROM sk_buta where nik=nik");
 
           if (isset($_POST['search'])) {
             $keyword = trim($_POST['keyword']);
             if (!empty($keyword)) {
-              $query = mysqli_query($con, "SELECT * FROM suratketeranganusaha WHERE nik LIKE '%" . $keyword . "%' OR nama LIKE '%" . $keyword . "%'");
+              $query = mysqli_query($con, "SELECT * FROM sk_buta WHERE nik LIKE '%" . $keyword . "%' OR nama LIKE '%" . $keyword . "%'");
             }
           }
 
@@ -79,7 +79,7 @@
       </table>
     </div>
     <?php
-    $result = mysqli_query($con, "SELECT * FROM suratketeranganusaha");
+    $result = mysqli_query($con, "SELECT * FROM sk_buta");
     $total_records = mysqli_num_rows($result);
     ?>
 

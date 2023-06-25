@@ -11,11 +11,11 @@ href="index.php">
  <hr class="sidebar-divider my-0">
  <li class="nav-item info">
  <a class="nav-link" href="?page=dashboard">
- <i class="fas fa-fw fa-tachometer-alt"></i>
- <span>Dashboard</span></a>
+ <i class="fas fa-fw fa-tachometer-alt" style="color: Dodgerblue"></i>
+ <span >Dashboard</span></a>
  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#transaksi1"
  aria-expanded="true" aria-controls="transaksi">
- <i class="fas fa-fw fa-tasks"></i>
+ <i class="fas fa-fw fa-tasks" style="color: Dodgerblue"></i>
  <span>Pelayanan</span>
  </a>
  <div id="transaksi1" class="collapse" aria-labelledby="headingTwo" dataparent="#accordionSidebar">
@@ -30,7 +30,7 @@ href="index.php">
  <li class="nav-item">
  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#transaksi"
 aria-expanded="true" aria-controls="transaksi">
- <i class="fas fa-fw fa-database"></i>
+ <i class="fas fa-fw fa-database" style="color: Dodgerblue"></i>
  <span>Master Data</span>
  </a>
  <div id="transaksi" class="collapse" aria-labelledby="headingTwo" dataparent="#accordionSidebar">
@@ -43,7 +43,7 @@ aria-expanded="true" aria-controls="transaksi">
  <li class="nav-item">
  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#transaksi2"
 aria-expanded="true" aria-controls="transaksi">
- <i class="fas fa-fw  fa-folder-open"></i>
+ <i class="fas fa-fw  fa-folder-open" style="color: Dodgerblue"></i>
  <span>Rekap Laporan</span>
  </a>
  <div id="transaksi2" class="collapse" aria-labelledby="headingTwo" dataparent="#accordionSidebar">
@@ -58,12 +58,12 @@ aria-expanded="true" aria-controls="transaksi">
  </li>
 <li class="nav-item">
  <a class="nav-link" href="?page=user-show">
- <i class="fas fa-fw fa-user"></i>
+ <i class="fas fa-fw fa-user" style="color: Dodgerblue"></i>
  <span>User</span>
  </a>
  </li>
- <hr class="sidebar-divider d-none d-md-block">
- <div class="text-center d-none d-md-inline">
- <button class="rounded-circle border-0" id="sidebarToggle"></button>
+ <hr class="sidebar-divider  d-none d-md-block">
+ <div class="text-center  d-none d-md-inline">
+ <button class="rounded-circle border-0 " id="sidebarToggle"></button>
  </div>
 </ul>

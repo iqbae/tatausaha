@@ -8,8 +8,8 @@ $dataUser = mysqli_query($con, "SELECT * FROM sk_sehat");
 $Userbelummemilikirumah = mysqli_num_rows($dataUser);
 $dataUser = mysqli_query($con, "SELECT * FROM sk_sakit");
 $sk_sakit = mysqli_num_rows($dataUser);
-$dataUser = mysqli_query($con, "SELECT * FROM suratketeranganusaha");
-$suratketeranganusaha = mysqli_num_rows($dataUser);
+$dataUser = mysqli_query($con, "SELECT * FROM sk_buta");
+$sk_buta = mysqli_num_rows($dataUser);
 $dataUser = mysqli_query($con, "SELECT * FROM sk_kelahiran");
 $sk_kelahiran = mysqli_num_rows($dataUser);
 $dataUser = mysqli_query($con, "SELECT * FROM datapegawai");
@@ -64,7 +64,7 @@ $datapegawai = mysqli_num_rows($dataUser);
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-white text-uppercase mb-1">
                             SK BUTA WARNA</div>
-                        <div class="h5 mb-0 font-weight-bold text-white"><?php echo $suratketeranganusaha
+                        <div class="h5 mb-0 font-weight-bold text-white"><?php echo $sk_buta
                                                                             ?></div>
                     </div>
                     <div class="col-auto">

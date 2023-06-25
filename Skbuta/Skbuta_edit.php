@@ -2,7 +2,7 @@
 include "../connection.php";
 
 $idsku = $_GET['idsku'];
-$result = mysqli_query($con, "SELECT * FROM suratketeranganusaha WHERE idsku=$idsku");
+$result = mysqli_query($con, "SELECT * FROM sk_buta WHERE idsku=$idsku");
 while ($data = mysqli_fetch_array($result)) {
   $nomor_surat = $data['nomor_surat'];
   $nik = $data['nik'];
@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
   $tanggal_surat = $_POST['tanggal_surat'];
 
   // update user data
-  $result = mysqli_query($con, "UPDATE suratketeranganusaha SET nomor_surat='$nomor_surat', nik='$nik', nama='$nama', tempat_lahir='$tempat_lahir', tanggal_lahir='$tanggal_lahir', jenis_kelamin='$jenis_kelamin', status='$status', agama='$agama', kewarganegaraan='$kewarganegaraan', pekerjaan='$pekerjaan', alamat='$alamat', hasil='$hasil', keperluan='$keperluan', tanggal_surat='$tanggal_surat' WHERE idsku=$idsku");
+  $result = mysqli_query($con, "UPDATE sk_buta SET nomor_surat='$nomor_surat', nik='$nik', nama='$nama', tempat_lahir='$tempat_lahir', tanggal_lahir='$tanggal_lahir', jenis_kelamin='$jenis_kelamin', status='$status', agama='$agama', kewarganegaraan='$kewarganegaraan', pekerjaan='$pekerjaan', alamat='$alamat', hasil='$hasil', keperluan='$keperluan', tanggal_surat='$tanggal_surat' WHERE idsku=$idsku");
   // Redirect to homepage to display updated user in list
   echo "<script>window.location.href ='?page=Skbuta-show';</script>";
 }
