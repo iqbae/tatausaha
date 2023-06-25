@@ -15,12 +15,12 @@ if (isset($_POST['submit'])) {
   $masa_sakit = $_POST['masa_sakit'];
   $pekerjaan = $_POST['pekerjaan'];
   $tanggal_surat = $_POST['tanggal_surat'];
-  $insert = mysqli_query($con, "INSERT INTO suratketerangankematian(nomor_surat,nik,nama,tempat_lahir,tanggal_lahir,jenis_kelamin,alamat,dari_tanggal,sampai_tanggal,masa_sakit,pekerjaan,tanggal_surat) VALUES('$nomor_surat','$nik','$nama','$tempat_lahir','$tanggal_lahir','$jenis_kelamin','$alamat','$dari_tanggal','$sampai_tanggal','$masa_sakit','$pekerjaan','$tanggal_surat')");
+  $insert = mysqli_query($con, "INSERT INTO sk_sakit(nomor_surat,nik,nama,tempat_lahir,tanggal_lahir,jenis_kelamin,alamat,dari_tanggal,sampai_tanggal,masa_sakit,pekerjaan,tanggal_surat) VALUES('$nomor_surat','$nik','$nama','$tempat_lahir','$tanggal_lahir','$jenis_kelamin','$alamat','$dari_tanggal','$sampai_tanggal','$masa_sakit','$pekerjaan','$tanggal_surat')");
 
 
 
   if ($insert) {
-    echo "<script>window.location.href = '?page=Skk-show';</script>";
+    echo "<script>window.location.href = '?page=Sakit-show';</script>";
   }
 }
 if (isset($_GET['id'])) {
@@ -130,7 +130,7 @@ if (isset($_GET['id'])) {
         </div>
 
         <input type="submit" name="submit" class="btn btn-success" value="Simpan">
-        <a href="?page=Skk-show" class="btn btn-warning">Kembali</a>
+        <a href="?page=Sakit-show" class="btn btn-warning">Kembali</a>
       </form>
 
     </div>

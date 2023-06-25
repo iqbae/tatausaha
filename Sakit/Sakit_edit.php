@@ -2,7 +2,7 @@
 include "../connection.php";
 
 $idskk = $_GET['idskk'];
-$result = mysqli_query($con, "SELECT * FROM suratketerangankematian WHERE idskk=$idskk");
+$result = mysqli_query($con, "SELECT * FROM sk_sakit WHERE idskk=$idskk");
 while ($data = mysqli_fetch_array($result)) {
   $nomor_surat = $data['nomor_surat'];
   $nik = $data['nik'];
@@ -36,9 +36,9 @@ if (isset($_POST['submit'])) {
   $pekerjaan = $_POST['pekerjaan'];
   $tanggal_surat = $_POST['tanggal_surat'];
   // update user data
-  $result = mysqli_query($con, "UPDATE suratketerangankematian SET nomor_surat='$nomor_surat',nik='$nik',nama='$nama',tempat_lahir='$tempat_lahir',tanggal_lahir='$tanggal_lahir'=jenis_kelamin='$jenis_kelamin',alamat='$alamat',dari_tanggal='$dari_tanggal',sampai_tanggal='$sampai_tanggal',masa_sakit='$masa_sakit',pekerjaan='$pekerjaan',tanggal_surat='$tanggal_surat' WHERE idskk=$idskk");
+  $result = mysqli_query($con, "UPDATE sk_sakit SET nomor_surat='$nomor_surat',nik='$nik',nama='$nama',tempat_lahir='$tempat_lahir',tanggal_lahir='$tanggal_lahir'=jenis_kelamin='$jenis_kelamin',alamat='$alamat',dari_tanggal='$dari_tanggal',sampai_tanggal='$sampai_tanggal',masa_sakit='$masa_sakit',pekerjaan='$pekerjaan',tanggal_surat='$tanggal_surat' WHERE idskk=$idskk");
   // Redirect to homepage to display updated user in list
-  echo "<script>window.location.href ='?page=Skk-show';</script>";
+  echo "<script>window.location.href ='?page=Sakit-show';</script>";
 }
 
 ?>
@@ -119,7 +119,7 @@ if (isset($_POST['submit'])) {
         </div>
 
   <input type="submit" name="submit" class="btn btn-success" value="Simpan">
-  <a href="?page=Skk-show" class="btn btn-warning">Kembali</a>
+  <a href="?page=Sakit-show" class="btn btn-warning">Kembali</a>
   </form>
 </div>
 </div>

@@ -7,7 +7,7 @@
   <div class="card-body">
     <!-- <div class="row"> -->
     <a href="?page=datapenduduk-show3" class="btn btn-primary mb-2">Tambah Data</a>
-    <!-- <a href="Skk/Skk_laporan.php" target="_blank" class="btn btn-success  mb-2">Cetak</a> -->
+    <!-- <a href="Sakit/Sakit_laporan.php" target="_blank" class="btn btn-success  mb-2">Cetak</a> -->
     <form action="#" method="POST">
       <div class=" input-group mb-4">
         <input type="text" class="form-control" placeholder="Masukan nama" name="keyword">
@@ -40,12 +40,12 @@
           $page = isset($_GET["halaman"]) ? (int) $_GET["halaman"] : 1;
           $mulai = ($page > 1) ? ($page * $limit) - $limit : 0;
 
-          $query = mysqli_query($con, "SELECT * FROM suratketerangankematian where nik=nik");
+          $query = mysqli_query($con, "SELECT * FROM sk_sakit where nik=nik");
 
           if (isset($_POST['search'])) {
             $keyword = trim($_POST['keyword']);
             if (!empty($keyword)) {
-              $query = mysqli_query($con, "SELECT * FROM suratketerangankematian WHERE nik LIKE '%" . $keyword . "%' OR nama LIKE '%" . $keyword . "%'");
+              $query = mysqli_query($con, "SELECT * FROM sk_sakit WHERE nik LIKE '%" . $keyword . "%' OR nama LIKE '%" . $keyword . "%'");
             }
           }
 
@@ -65,10 +65,10 @@
               <td><?php echo $data['sampai_tanggal'] ?></td>
               <td><?php echo $data['tanggal_surat'] ?></td>
               <td>
-                <!-- <a href="?page=Skk-add&idskk=<?php echo $data['idskk']; ?>" class="btn btn-sm btn-link mr-1"><i class="fa fa-align-justify"></i></a> -->
-                <a href="?page=Skk-edit&idskk=<?php echo $data['idskk']; ?>" class="btn btn-sm btn-link mr-1"><i class="fas fa-edit"></i></a>
-                <a target="_BLANK" href="Skk/Skk_print.php?idskk=<?php echo $data['idskk']; ?>" class="btn btn-sm btn-link mr-1" onclick="return confirm('Cetak Surat <?php echo $data['nama']; ?> ( <?php echo $data['nomor_surat']; ?> ) ? ');"><i class="fa fa-print"></i></a>
-                <a href="?page=Skk-delete&idskk=<?php echo $data['idskk']; ?>" class="btn btn-sm btn-link text-danger" onclick="return confirm('Anda yakin mau menghapus item ini ?')"><i class="fa fa-trash"></i></a>
+                <!-- <a href="?page=Sakit-add&idskk=<?php echo $data['idskk']; ?>" class="btn btn-sm btn-link mr-1"><i class="fa fa-align-justify"></i></a> -->
+                <a href="?page=Sakit-edit&idskk=<?php echo $data['idskk']; ?>" class="btn btn-sm btn-link mr-1"><i class="fas fa-edit"></i></a>
+                <a target="_BLANK" href="Sakit/Sakit_print.php?idskk=<?php echo $data['idskk']; ?>" class="btn btn-sm btn-link mr-1" onclick="return confirm('Cetak Surat <?php echo $data['nama']; ?> ( <?php echo $data['nomor_surat']; ?> ) ? ');"><i class="fa fa-print"></i></a>
+                <a href="?page=Sakit-delete&idskk=<?php echo $data['idskk']; ?>" class="btn btn-sm btn-link text-danger" onclick="return confirm('Anda yakin mau menghapus item ini ?')"><i class="fa fa-trash"></i></a>
 
               </td>
             </tr>
@@ -81,7 +81,7 @@
       </table>
     </div>
     <?php
-    $result = mysqli_query($con, "SELECT * FROM suratketerangankematian");
+    $result = mysqli_query($con, "SELECT * FROM sk_sakit");
     $total_records = mysqli_num_rows($result);
     ?>
 

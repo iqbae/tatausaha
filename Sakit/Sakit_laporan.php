@@ -51,7 +51,7 @@ $year = date("Y");
             <tbody>
                 <?php
                 $no = 1;
-                $result = mysqli_query($con, "SELECT * FROM suratketerangankematian");
+                $result = mysqli_query($con, "SELECT * FROM sk_sakit");
                 while ($data = mysqli_fetch_array($result)) {
                 ?>
                     <tr>

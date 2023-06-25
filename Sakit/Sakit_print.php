@@ -13,7 +13,7 @@ $year = date("Y");
 if (isset($_GET['idskk'])) {
   $idskk  = $_GET['idskk'];
   $no = 1;
-  $query = mysqli_query($con, "SELECT * FROM suratketerangankematian b JOIN datapenduduk p ON b.nik=p.nik WHERE b.idskk='$_GET[idskk]'")
+  $query = mysqli_query($con, "SELECT * FROM sk_sakit b JOIN datapenduduk p ON b.nik=p.nik WHERE b.idskk='$_GET[idskk]'")
     or die('Ada kesalahan pada query tampil Data : ' . mysqli_error($con));
 }
 
