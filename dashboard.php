@@ -10,8 +10,8 @@ $dataUser = mysqli_query($con, "SELECT * FROM suratketerangankematian");
 $suratketerangankematian = mysqli_num_rows($dataUser);
 $dataUser = mysqli_query($con, "SELECT * FROM suratketeranganusaha");
 $suratketeranganusaha = mysqli_num_rows($dataUser);
-$dataUser = mysqli_query($con, "SELECT * FROM suratketerangantidakmampu");
-$suratketerangantidakmampu = mysqli_num_rows($dataUser);
+$dataUser = mysqli_query($con, "SELECT * FROM sk_kelahiran");
+$sk_kelahiran = mysqli_num_rows($dataUser);
 $dataUser = mysqli_query($con, "SELECT * FROM datapegawai");
 $datapegawai = mysqli_num_rows($dataUser);
 ?>
@@ -45,7 +45,7 @@ $datapegawai = mysqli_num_rows($dataUser);
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-white text-uppercase mb-1">
                             SK LAHIR</div>
-                        <div class="h5 mb-0 font-weight-bold text-white"><?php echo $suratketerangantidakmampu
+                        <div class="h5 mb-0 font-weight-bold text-white"><?php echo $sk_kelahiran
                                                                             ?></div>
                     </div>
                     <div class="col-auto">

@@ -13,7 +13,7 @@ $year = date("Y");
 if (isset($_GET['idsktm'])) {
             $idsktm  = $_GET['idsktm'];
             $no = 1;  
-            $query = mysqli_query($con, "SELECT * FROM suratketerangantidakmampu b JOIN datapenduduk p ON b.nik=p.nik WHERE b.idsktm='$_GET[idsktm]'")
+            $query = mysqli_query($con, "SELECT * FROM sk_kelahiran WHERE idsktm='$_GET[idsktm]'")
                 or die('Ada kesalahan pada query tampil Data : '.mysqli_error($con));
 
 }
@@ -34,9 +34,9 @@ if (isset($_GET['idsktm'])) {
             <br>Telepon (0511) 6749272 E-mail : rsu.nirwana@gmail.com</center>
             </h2>
         <hr style="border: 2; border-top: solid 3.5px #444;">
-        <?php
+        <!-- <?php
           while ($data = mysqli_fetch_array($query)) {    
-        ?>
+        ?> -->
         <div id="title">
             <h3><u>SURAT KETERANGAN LAHIR</u></h3><br>
             <p style="margin-top: -40px; font-size: 14;">Nomor :&nbsp;<?php echo $data['nomor_surat']; ?>/NIR<!-- / X - <?php echo $year; ?> --></p>
@@ -55,36 +55,56 @@ if (isset($_GET['idsktm'])) {
             </tr>
             <tr >
               <td width="360" align="left"><br>Nama</td>
-              <td width="340" align="left"><br>: <b><?php echo $data['nama']; ?></b></td> 
+              <td width="340" align="left"><br>: <b><?php echo $data['nama_istri']; ?></b></td> 
             </tr>
             <tr >
-              <td width="360" align="left">NIK</td>
-              <td width="340" align="left">: <?php echo $data['nik']; ?></td> 
+              <td width="360" align="left">Umur</td>
+              <td width="340" align="left">: <?php echo $data['umur_istri']; ?></td> 
+            </tr>
+            <tr > 
+              <td width="400" align="left"><b>Merupakan istri dari<b></td>
+            </tr>
+            <tr > 
+              <td width="400" align="left">Nama Suami</td>
+              <td width="340" align="left">: <b><?php echo $data['nama_suami']; ?></b></td> 
+            </tr>
+            <tr >
+              <td width="360" align="left">Umur</td>
+              <td width="340" align="left">: <?php echo $data['umur_suami']; ?></td> 
+            </tr>
+            <tr >
+              <td width="360" align="left">beralamat</td>
+              <td width="340" align="left">: <?php echo $data['alamat']; ?></td> 
+            </tr>
+            <tr >
+              <td width="360" align="left"><b>Telah melahirkan seorang anak pada<b></td>
+              <td width="340" align="left"><br><br></td>  
             </tr>
             <tr >
               <td width="360" align="left">Tempat/Tanggal Lahir</td>
               <td width="340" align="left">: <?php echo $data['tempat_lahir']; ?>, <?php echo tgl_eng_to_ind($data['tanggal_lahir']); ?></td> 
             </tr>
             <tr >
+              <td width="360" align="left">Nama </td>
+              <td width="340" align="left">: <?php echo $data['nama_anak']; ?></td> 
+            </tr>
+            <tr >
               <td width="360" align="left">Jenis Kelamin</td>
               <td width="340" align="left">: <?php echo $data['jenis_kelamin']; ?></td> 
             </tr>
             <tr >
-              <td width="360" align="left">Status</td>
-              <td width="340" align="left">: <?php echo $data['status']; ?></td> 
+              <td width="360" align="left">Berat</td>
+              <td width="340" align="left">: <?php echo $data['berat']; ?></td> 
             </tr>
             <tr >
-              <td width="360" align="left">Agama</td>
-              <td width="340" align="left">: <?php echo $data['agama']; ?></td> 
+              <td width="360" align="left">Panjang</td>
+              <td width="340" align="left">: <?php echo $data['panjang']; ?></td> 
             </tr>
             <tr >
-              <td width="360" align="left">Pekerjaan</td>
-              <td width="340" align="left">: <?php echo $data['pekerjaan']; ?></td> 
+              <td width="360" align="left">Anak ke</td>
+              <td width="340" align="left">: <?php echo $data['anak_ke']; ?></td> 
             </tr>
-            <tr >
-              <td width="360" align="left">Alamat</td>
-              <td width="340" align="left">: <?php echo $data['alamat']; ?></td> 
-            </tr>
+            
             </table>
             <div class="container" style="font-size: 11pt;">
               <br>

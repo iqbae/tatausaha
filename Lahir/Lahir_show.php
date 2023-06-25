@@ -30,6 +30,7 @@
             <th>Tempat Lahir</th>
             <th>Tanggal Lahir</th>
             <th>Pukul</th>
+            <th>Nama Anak</th>
             <th>Jenis Kelamin</th>
             <th>Berat</th>
             <th>Panjang</th>
@@ -45,12 +46,12 @@
           $page = isset($_GET["halaman"]) ? (int) $_GET["halaman"] : 1;
           $mulai = ($page > 1) ? ($page * $limit) - $limit : 0;
 
-          $query = mysqli_query($con, "SELECT * FROM suratketerangantidakmampu where idsktm=idsktm");
+          $query = mysqli_query($con, "SELECT * FROM sk_kelahiran where idsktm=idsktm");
 
           if (isset($_POST['search'])) {
             $keyword = trim($_POST['keyword']);
             if (!empty($keyword)) {
-              $query = mysqli_query($con, "SELECT * FROM suratketerangantidakmampu WHERE idsktm LIKE '%" . $keyword . "%' OR nama LIKE '%" . $keyword . "%'");
+              $query = mysqli_query($con, "SELECT * FROM sk_kelahiran WHERE idsktm LIKE '%" . $keyword . "%' OR nama LIKE '%" . $keyword . "%'");
             }
           }
 
@@ -68,6 +69,7 @@
               <td><?php echo $data['tempat_lahir'] ?></td>
               <td><?php echo $data['tanggal_lahir'] ?></td>
               <td><?php echo $data['pukul'] ?></td>
+              <td><?php echo $data['nama_anak'] ?></td>
               <td><?php echo $data['jenis_kelamin'] ?></td>
               <td><?php echo $data['berat'] ?></td>
               <td><?php echo $data['panjang'] ?></td>
@@ -77,7 +79,7 @@
               <td>
                 <!-- <a href="?page=Sktm-add&idsktm=<?php echo $data['idsktm']; ?>" class="btn btn-sm btn-link mr-1"><i class="fa fa-align-justify"></i></a> -->
                 <a href="?page=Sktm-edit&idsktm=<?php echo $data['idsktm']; ?>" class="btn btn-sm btn-link mr-1"><i class="fas fa-edit"></i></a>
-                <a target="_BLANK" href="Sktm/Sktm_print.php?idsktm=<?php echo $data['idsktm']; ?>" class="btn btn-sm btn-link mr-1" onclick="return confirm('Cetak Surat <?php echo $data['nama_istri']; ?> ( <?php echo $data['nomor_surat']; ?> ) ? ');"><i class="fa fa-print"></i></a>
+                <a target="_BLANK" href="Lahir/Sktm_print.php?idsktm=<?php echo $data['idsktm']; ?>" class="btn btn-sm btn-link mr-1" onclick="return confirm('Cetak Surat <?php echo $data['nama_istri']; ?> ( <?php echo $data['nomor_surat']; ?> ) ? ');"><i class="fa fa-print"></i></a>
                 <a href="?page=Sktm-delete&idsktm=<?php echo $data['idsktm']; ?>" class="btn btn-sm btn-link text-danger" onclick="return confirm('Anda yakin mau menghapus item ini ?')"><i class="fa fa-trash"></i></a>
 
               </td>
@@ -91,7 +93,7 @@
       </table>
     </div>
     <?php
-    $result = mysqli_query($con, "SELECT * FROM suratketerangantidakmampu");
+    $result = mysqli_query($con, "SELECT * FROM sk_kelahiran");
     $total_records = mysqli_num_rows($result);
     ?>
 

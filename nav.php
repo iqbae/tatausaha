@@ -49,7 +49,7 @@ aria-expanded="true" aria-controls="transaksi">
  <div id="transaksi2" class="collapse" aria-labelledby="headingTwo" dataparent="#accordionSidebar">
  <div class="bg-info py-2 collapse-inner rounded">
  <a target="_BLANK" class="collapse-item" href="Narkoba/Narkoba_laporan.php">SK Bebas Narkoba</a>
- <a target="_BLANK" class="collapse-item" href="Sktm/Sktm_laporan.php">SK Lahir</a>
+ <a target="_BLANK" class="collapse-item" href="Lahir/Sktm_laporan.php">SK Lahir</a>
  <a target="_BLANK" class="collapse-item" href="Sku/Sku_laporan.php">SK Bebas Buta Warna</a>
  <a target="_BLANK" class="collapse-item" href="Skk/Skk_laporan.php">SK Sakit</a>
  <a target="_BLANK" class="collapse-item" href="Skbmr/Skbmr_laporan.php">SK Sehat</a>
