@@ -78,9 +78,9 @@
               <td><?php echo $data['tanggal_surat'] ?></td>
               <td>
                 <!-- <a href="?page=Sktm-add&idsktm=<?php echo $data['idsktm']; ?>" class="btn btn-sm btn-link mr-1"><i class="fa fa-align-justify"></i></a> -->
-                <a href="?page=Sktm-edit&idsktm=<?php echo $data['idsktm']; ?>" class="btn btn-sm btn-link mr-1"><i class="fas fa-edit"></i></a>
-                <a target="_BLANK" href="Lahir/Sktm_print.php?idsktm=<?php echo $data['idsktm']; ?>" class="btn btn-sm btn-link mr-1" onclick="return confirm('Cetak Surat <?php echo $data['nama_istri']; ?> ( <?php echo $data['nomor_surat']; ?> ) ? ');"><i class="fa fa-print"></i></a>
-                <a href="?page=Sktm-delete&idsktm=<?php echo $data['idsktm']; ?>" class="btn btn-sm btn-link text-danger" onclick="return confirm('Anda yakin mau menghapus item ini ?')"><i class="fa fa-trash"></i></a>
+                <a href="?page=Lahir-edit&idsktm=<?php echo $data['idsktm']; ?>" class="btn btn-sm btn-link mr-1"><i class="fas fa-edit"></i></a>
+                <a target="_BLANK" href="Lahir/Lahir_print.php?idsktm=<?php echo $data['idsktm']; ?>" class="btn btn-sm btn-link mr-1" onclick="return confirm('Cetak Surat <?php echo $data['nama_istri']; ?> ( <?php echo $data['nomor_surat']; ?> ) ? ');"><i class="fa fa-print"></i></a>
+                <a href="?page=Lahir-delete&idsktm=<?php echo $data['idsktm']; ?>" class="btn btn-sm btn-link text-danger" onclick="return confirm('Anda yakin mau menghapus item ini ?')"><i class="fa fa-trash"></i></a>
 
               </td>
             </tr>

@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
   $insert = mysqli_query($con, "INSERT INTO sk_kelahiran(nomor_surat,nama_istri,umur_istri,nama_suami,umur_suami,tempat_lahir,tanggal_lahir,pukul,nama_anak,jenis_kelamin,berat,panjang,anak_ke,alamat,tanggal_surat) VALUES('$nomor_surat','$nama_istri','$umur_istri','$nama_suami','$umur_suami','$tempat_lahir','$tanggal_lahir','$pukul','$nama_anak','$jenis_kelamin','$berat','$panjang','$anak_ke','$alamat','$tanggal_surat')");
 
   if ($insert) {
-    echo "<script>window.location.href = '?page=Sktm-show';</script>";
+    echo "<script>window.location.href = '?page=Lahir-show';</script>";
   }
 }
 if (isset($_GET['id'])) {
@@ -152,7 +152,7 @@ if (isset($_GET['id'])) {
   </div>
 
   <input type="submit" name="submit" class="btn btn-success" value="Simpan">
-  <a href="?page=Sktm-show" class="btn btn-warning">Kembali</a>
+  <a href="?page=Lahir-show" class="btn btn-warning">Kembali</a>
 </form>
 
 </div>

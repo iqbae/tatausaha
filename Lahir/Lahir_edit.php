@@ -42,7 +42,7 @@ if (isset($_POST['submit'])) {
   $result = mysqli_query($con, "UPDATE sk_kelahiran SET nomor_surat='$nomor_surat',nama_istri='$nama_istri',umur_istri='$umur_istri',nama_suami='$nama_suami',umur_suami='$umur_suami',tempat_lahir='$tempat_lahir',tanggal_lahir='$tanggal_lahir',pukul='$pukul',nama_anak='$nama_anak',jenis_kelamin='$jenis_kelamin',berat='$berat',panjang='$panjang',anak_ke='$anak_ke',alamat='$alamat', tanggal_surat='$tanggal_surat' WHERE idsktm=$idsktm");
   // update user data
   // Redirect to homepage to display updated user in list
-  echo "<script>window.location.href ='?page=Sktm-show';</script>";
+  echo "<script>window.location.href ='?page=Lahir-show';</script>";
 }
 
 ?>
@@ -160,7 +160,7 @@ if (isset($_POST['submit'])) {
 
 
       <input type="submit" name="submit" class="btn btn-success" value="Simpan">
-      <a href="?page=Sktm-show" class="btn btn-warning">Kembali</a>
+      <a href="?page=Lahir-show" class="btn btn-warning">Kembali</a>
     </form>
   </div>
 </div>

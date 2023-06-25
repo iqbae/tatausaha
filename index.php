@@ -23,16 +23,16 @@ case "Narkoba-delete";
 include "Narkoba/Narkoba_delete.php";
 break;
 // SK Tidak Mampu
-case "Sktm-show";
+case "Lahir-show";
 include "Lahir/Lahir_show.php";
 break;
-case "Sktm-add";
+case "Lahir-add";
 include "Lahir/Lahir_add.php";
 break;
-case "Sktm-edit";
+case "Lahir-edit";
 include "Lahir/Lahir_edit.php";
 break;
-case "Sktm-delete";
+case "Lahir-delete";
 include "Lahir/Lahir_delete.php";
 break;
 // SK Usaha

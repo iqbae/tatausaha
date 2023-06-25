@@ -21,7 +21,7 @@ href="index.php">
  <div id="transaksi1" class="collapse" aria-labelledby="headingTwo" dataparent="#accordionSidebar">
  <div class="bg-info py-2 collapse-inner rounded">
  <a class="collapse-item" href="?page=Narkoba-show">SK Bebas Narkoba</a>
- <a class="collapse-item" href="?page=Sktm-show">SK Lahir</a>
+ <a class="collapse-item" href="?page=Lahir-show">SK Lahir</a>
  <a class="collapse-item" href="?page=Sku-show">SK Bebas Buta Warna</a>
  <a class="collapse-item" href="?page=Skk-show">SK Sakit</a>
  <a class="collapse-item" href="?page=Skbmr-show">SK Sehat</a>
@@ -49,7 +49,7 @@ aria-expanded="true" aria-controls="transaksi">
  <div id="transaksi2" class="collapse" aria-labelledby="headingTwo" dataparent="#accordionSidebar">
  <div class="bg-info py-2 collapse-inner rounded">
  <a target="_BLANK" class="collapse-item" href="Narkoba/Narkoba_laporan.php">SK Bebas Narkoba</a>
- <a target="_BLANK" class="collapse-item" href="Lahir/Sktm_laporan.php">SK Lahir</a>
+ <a target="_BLANK" class="collapse-item" href="Lahir/Lahir_laporan.php">SK Lahir</a>
  <a target="_BLANK" class="collapse-item" href="Sku/Sku_laporan.php">SK Bebas Buta Warna</a>
  <a target="_BLANK" class="collapse-item" href="Skk/Skk_laporan.php">SK Sakit</a>
  <a target="_BLANK" class="collapse-item" href="Skbmr/Skbmr_laporan.php">SK Sehat</a>
