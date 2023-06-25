@@ -6,7 +6,7 @@
   <div class="card-body">
     <!-- <div class="row"> -->
     <a href="?page=datapenduduk-add" class="btn btn-primary mb-2">Tambah Data</a>
-    <a href="./barang/print.php" target="_blank" class="btn btn-success  mb-2">Cetak</a>
+    <!-- <a href="./barang/print.php" target="_blank" class="btn btn-success  mb-2">Cetak</a> -->
     <form action="#" method="POST">
       <div class=" input-group mb-4">
         <input type="text" class="form-control" placeholder="Masukan nama" name="keyword">
@@ -60,7 +60,7 @@
               <td><?php echo $data['jenis_kelamin'] ?></td>
               <td><?php echo $data['alamat'] ?></td>
               <td>
-                <a href="?page=Skk-add&id=<?php echo $data['nik']; ?>" class="btn btn-sm btn-link mr-2"><i class="fas fa-arrow-alt-circle-right" style="color:orange"></i></a>
+                <a href="?page=Sakit-add&id=<?php echo $data['nik']; ?>" class="btn btn-sm btn-link mr-2"><i class="fas fa-arrow-alt-circle-right" style="color:orange"></i></a>
                 <a href="?page=datapenduduk-delete&idpenduduk=<?php echo $data['idpenduduk']; ?>" class="btn btn-sm btn-link text-danger" onclick="return confirm('Anda yakin mau menghapus item ini ?')"><i class="fa fa-trash"></i></a>
 
               </td>

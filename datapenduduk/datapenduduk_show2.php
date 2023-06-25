@@ -6,7 +6,7 @@
   <div class="card-body">
     <!-- <div class="row"> -->
     <a href="?page=datapenduduk-add" class="btn btn-primary mb-2">Tambah Data</a>
-    <a href="./barang/print.php" target="_blank" class="btn btn-success  mb-2">Cetak</a>
+    <!-- <a href="./barang/print.php" target="_blank" class="btn btn-success  mb-2">Cetak</a> -->
     <form action="#" method="POST">
       <div class=" input-group mb-4">
         <input type="text" class="form-control" placeholder="Masukan nama" name="keyword">
