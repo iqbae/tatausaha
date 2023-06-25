@@ -16,9 +16,9 @@ while ($data = mysqli_fetch_array($result)) {
   $pekerjaan = $data['pekerjaan'];
   $alamat = $data['alamat'];
   $keperluan = $data['keperluan'];
-  $aphetamine = $_POST['aphetamine'];
-  $methamphetamine = $_POST['methamphetamine'];
-  $tch = $_POST['tch'];
+  $aphetamine = $data['aphetamine'];
+  $methamphetamine = $data['methamphetamine'];
+  $tch = $data['tch'];
   $tanggal_surat = $data['tanggal_surat'];
 }
 
