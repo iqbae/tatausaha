@@ -6,7 +6,7 @@
   </div>
   <div class="card-body">
     <!-- <div class="row"> -->
-    <a href="?page=Sktm-add" class="btn btn-primary mb-2">Tambah Data</a>
+    <a href="?page=Lahir-add" class="btn btn-primary mb-2">Tambah Data</a>
     <!-- <a href="Sktm/Sktm_laporan.php" target="_blank" class="btn btn-success  mb-2">Cetak</a> -->
     <form action="#" method="POST">
       <div class=" input-group mb-4">
